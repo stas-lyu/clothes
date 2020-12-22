@@ -8,6 +8,17 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 63342,
+        proxy: {
+            '/products': {
+                target: 'http://localhost:5000',
+                secure: false
+            }
+        }
+    },
     module: {
         rules: [
             {
@@ -43,5 +54,6 @@ module.exports = {
 
         ]
     },
+
     plugins: [new MiniCssExtractPlugin()],
 };

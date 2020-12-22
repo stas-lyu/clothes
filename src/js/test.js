@@ -27,4 +27,5 @@ const newProduct = {
 //     });
 
 fetch('/products')
-    .then(response => console.log(response));
+    .then(response => response.json())
+    .then(json => console.log(json));

@@ -9,15 +9,12 @@ module.exports = {
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: path.join(__dirname, "dist"),
-        compress: true,
-        port: 63342,
+        historyApiFallback: true,
         proxy: {
             '/products': {
                 target: 'http://localhost:5000',
-                secure: false
-            }
-        }
+            },
+        },
     },
     module: {
         rules: [

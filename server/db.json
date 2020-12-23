@@ -273,6 +273,60 @@
       "brand":"thrasher",
       "parametrs":["The emblem is on the front", "The inner edge is sewn with moisture-absorbing tape."],
       "description":[ "This company appeared originally as a skateboarding magazine created in San Francisco, it covered various news, reviews, various photos and much more. It appeared in 1981 and was founded by three guys - Kevin Thatcher, Eric Swenson, and Fausto Vitello. The magazine still exists, there is also an Internet version of it."]
-    }
-  ]
+    },
+    {
+      "name": " Casio A700WEG-9AEF Gold Watch",
+      "currentPrice": 2680.00,
+      "categories": "watch",
+      "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/7/a700weg-9aef.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/7/a700weg-9aef_1_.jpg "],
+      "quantity": 50,
+      "color": "gold",
+      "productUrl":"/watch",
+      "brand":" Casio",
+      "parametrs":[" The watch is made of a plastic case and a steel bracelet, and a polymer glass protects the LCD dial. "],
+      "description":[ " The origin of the Japanese company Casio goes back to the deep forties of the last century .. Its founder was a humble boy Tadao Kasio. Since childhood, Tadao has shown incredible abilities and an extraordinary thirst for knowledge. The young man's talents were noticed by the managers of the plant where he worked in order to financially help the family. The company paid for the guy's higher education, which later allowed him to open his own business with his brothers. "]
+    },{
+      "name": " NIXON Watch Re-Run All Black / Green ",
+      "currentPrice": 4199.00,
+      "categories": "watch",
+      "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/9/a944-032-view1.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/9/a944-032-view5.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/9/a944-032-view2.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/9/a944-032-view3.jpg  "],
+      "quantity": 50,
+      "color": " black / green ",
+      "productUrl":"/watch",
+      "brand":" NIXON ",
+      "parametrs":[" This watch is endowed with all the functions necessary in everyday life: calendar, alarm clock, timer, and of course, hours, minutes and seconds. Re-Run was created for those who do not need all these fancy bells and whistles - the watch should show the time, and Nixon knows how to create such mechanisms that will show you extremely accurate time. "],
+      "description":[ " In general, let's face it, Nixon's Re-Run is an ordinary watch, but made to last, and it looks incredibly cool. "]
+    },{
+      "name": " Nixon Time Teller All Rose Gold Watch ",
+      "currentPrice": 3465.00,
+      "categories": "watch",
+      "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/n/_nixon_time_teller_all_rose_gold.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/n/_nixon_time_teller_all_rose_gold_3.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/n/_nixon_time_teller_all_rose_gold_2.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/n/_nixon_time_teller_all_rose_gold_4.jpg  "],
+      "quantity": 50,
+      "color": "rose gold",
+      "productUrl":"/watch",
+      "brand":" Nixon ",
+      "parametrs":[" The elder brother of the popular Time Teller made of polyurethane in bright colors, as it should be, is stylish, solid, strict and restrained in colors. ", " For those who love hard materials.. "],
+      "description":[ " Mechanism: Japanese quartz movement Miyota Functions: hours, minutes, seconds Accuracy 1/20 second. Housing: Width 39.25 mm One-piece case with screw-on cover and crown Stainless steel Water resistance 100 m (10 ATM) Reinforced mineral glass Triple seal crown."]
+        },{
+          "name": " Casio G-Shock GA-2100-4AER Red Watch",
+          "currentPrice": 4590.00,
+          "categories": "watch",
+          "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100-4aer.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100-4aer-6.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100-4aer-3.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-2-1536x1024.jpg"],
+          "quantity": 50,
+          "color": "red",
+          "productUrl":"/watch",
+          "brand":" Casio ",
+          "parametrs":[" By its characteristic appearance, you can immediately determine that this is a Casio watch, made in a dynamic case and a good color scheme. The watch mechanism is electronic, quartz, Japanese production. The strap and case are constructed from a polymer with excellent wear resistance. "],
+          "description":[ " The origin of the Japanese company Casio goes back to the deep forties of the last century .. Its founder was a humble boy Tadao Kasio. Since childhood, Tadao has shown incredible abilities and an extraordinary thirst for knowledge. The young man's talents were noticed by the managers of the plant where he worked in order to financially help the family. The company paid for the guy's higher education, which later allowed him to open his own business with his brothers. "]
+        },{
+          "name": " Casio G-Shock GA-2100THS-1AER Black / Purple Watch ",
+          "currentPrice": 5830.00,
+          "categories": "watch",
+          "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100ths-1aer.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100ths-1aer-1.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-4-1536x1024.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-5-1536x1024.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-6-1536x1024.jpg "],
+          "quantity": 50,
+          "color": "black / purple",
+          "productUrl":"/watch",
+          "brand":" Casio ",
+          "parametrs":["By its characteristic appearance, you can immediately determine that this is a Casio watch, made in a dynamic case and a good color scheme. The watch mechanism is electronic, quartz, Japanese production. The strap and case are constructed from a polymer with excellent wear resistance."],
+            "description":[ " Initially, the Casio brand, officially registered in 1957, produced microcircuits, calculators, various spare parts for microscopes and electronic parts. In the same year, the company's developers invented and patented an electric micro-calculator. Casio became a monopoly on the Japanese electronics market and thundered all over the world. CASIO's corporate credo is creativity and contribution."]}]
 }

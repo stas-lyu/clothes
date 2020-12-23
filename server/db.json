@@ -1,9 +1,129 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Lighter Clipper Metal Large Green Leaves, w/case",
+      "currentPrice": 350,
+      "previousPrice": 300,
+      "categories": "Lighters",
+      "imageUrls": [
+        "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/c/_clipper_metal_large_green_leaves55.jpg",
+        "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/c/_clipper_metal_large_green_leaves.jpg",
+        "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/c/_clipper_metal_large_green_leaves_2.jpg"
+      ],
+      "quantity": 10,
+      "color": "green",
+      "productUrl": "/lighters",
+      "brand": "Clipper.",
+      "myCustomParam": [
+        ""
+      ],
+      "id": 2000000456737,
+      "description": [
+        "Spanish world famous Clipper lighters.",
+        "Clipper metal Leaves Green - green hemp leaves on a black background, there are options with a black or green top.",
+        "Clipper is a leader in the global lighter market and is a favorite with refillable lighter consumers for its iconic, iconic design and high quality.",
+        "Clipper lighters work well with pipes and have features such as a fixed adjustable flame, removable flint and childproof mechanism."
+      ]
+    },
+    {
+      "name": "Lighter Clipper Metal Large Yellow Mexican Skull, w/case",
+      "currentPrice": 350,
+      "categories": "Lighters",
+      "imageUrls": [
+        "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/c/l/clipper_metal_large_gold_mex_skulls4.jpg",
+        "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/c/l/clipper_metal_large_gold_mex_skulls2.jpg"
+      ],
+      "quantity": 8,
+      "color": "yellow",
+      "productUrl": "/lighters",
+      "brand": "Clipper",
+      "myCustomParam": [
+        ""
+      ],
+      "id": 2000000456744,
+      "description": [
+        "Spanish world famous Clipper lighters.",
+        "Clipper metal Leaves Green - green hemp leaves on a black background, there are options with a black or green top.",
+        "Clipper is a leader in the global lighter market and is a favorite with refillable lighter consumers for its iconic, iconic design and high quality.",
+        "Clipper lighters work well with pipes and have features such as a fixed adjustable flame, removable flint and childproof mechanism."
+      ]
+    },
+    {
+      "name": "Lighter Clipper Metal Large Silver Mexican Skull, w/case",
+      "currentPrice": 310,
+      "previousPrice": 350,
+      "categories": "Lighters",
+      "imageUrls": [
+        "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/c/l/clipper_metal_large_silver_mex_skulls3.jpg",
+        "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/c/l/clipper_metal_large_silver_mex_skulls6.jpg"
+      ],
+      "quantity": 11,
+      "color": "Silver",
+      "productUrl": "/lighters",
+      "brand": "Clipper",
+      "myCustomParam": [
+        ""
+      ],
+      "id": 2000000456751,
+      "description": [
+        "Spanish world famous Clipper lighters.",
+        "Clipper metal Leaves Green - green hemp leaves on a black background, there are options with a black or green top.",
+        "Clipper is a leader in the global lighter market and is a favorite with refillable lighter consumers for its iconic, iconic design and high quality.",
+        "Clipper lighters work well with pipes and have features such as a fixed adjustable flame, removable flint and childproof mechanism."
+      ]
+    },
+    {
+      "name": "Belt HUF Domestic Military Poppy",
+      "currentPrice": 599,
+      "previousPrice": 629,
+      "categories": "Belts",
+      "imageUrls": [
+        "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/c/ac00306_1.jpg"
+      ],
+      "quantity": 3,
+      "color": "Red",
+      "productUrl": "/belts",
+      "brand": "HUF",
+      "myCustomParam": [
+        "Webbed military belt",
+        " All-over ‘HUF Worldwide’ logo jacquard",
+        "Engraved anti-nickel finish buckle",
+        "One size fits most",
+        "57'' length"
+      ],
+      "id": 2000000426594,
+      "description": [
+        "The HUF Domestic Military Belt in Poppy Red features a durable webbed construction with all-over jacquard HUF Worldwide branding.",
+        "Inspired by heritage military design, the belt is secured with an anti-nickel finish buckle engraved with a ‘HUF Original Logo.’ 90s vibes."
+      ]
+    },
+    {
+      "name": "Belt HUF Easy Scout Belt Black/Black",
+      "currentPrice": 799,
+      "previousPrice": 857,
+      "categories": "Belts",
+      "imageUrls": [
+        "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/e/a/easy-scout-belt_black-black_ac00412_bkblk_01_1024x1024_2x.jpg"
+      ],
+      "quantity": 7,
+      "color": "Black",
+      "productUrl": "/belts",
+      "brand": "HUF",
+      "myCustomParam": [
+        "Webbed military belt",
+        " All-over ‘HUF Worldwide’ logo jacquard",
+        "Engraved anti-nickel finish buckle",
+        "One size fits most",
+        "57'' length"
+      ],
+      "id": 2000000447889,
+      "description": [
+        "Webbed nylon military belt w/ reflective logo taping",
+        "Metal buckle with embossed logo and bottle opener",
+        "Embossed logo at metal end clip",
+        "One size fits most",
+        "45’' length"
+      ]
     },
     {
       "name": "new product for testing purposes",
@@ -14,50 +134,14 @@
         "img/products/men/001.png",
         "img/products/men/002.png",
         "img/products/men/003.png",
-        "img/products/men/004.png"
+        "img/products/men/004.png",
       ],
       "quantity": 100,
       "color": "red",
       "productUrl": "/men",
       "brand": "braaaand",
       "myCustomParam": "some string or json for custom param",
-      "id": 2
-    },
-    {
-      "name": "new product for testing purposes",
-      "currentPrice": 199.99,
-      "previousPrice": 250,
-      "categories": "men",
-      "imageUrls": [
-        "img/products/men/001.png",
-        "img/products/men/002.png",
-        "img/products/men/003.png",
-        "img/products/men/004.png"
-      ],
-      "quantity": 100,
-      "color": "red",
-      "productUrl": "/men",
-      "brand": "braaaand",
-      "myCustomParam": "some string or json for custom param",
-      "id": 3
-    },
-    {
-      "name": "new product for testing purposes",
-      "currentPrice": 199.99,
-      "previousPrice": 250,
-      "categories": "men",
-      "imageUrls": [
-        "img/products/men/001.png",
-        "img/products/men/002.png",
-        "img/products/men/003.png",
-        "img/products/men/004.png"
-      ],
-      "quantity": 100,
-      "color": "red",
-      "productUrl": "/men",
-      "brand": "braaaand",
-      "myCustomParam": "some string or json for custom param",
-      "id": 4
+      "id": 2000000456752
     }
   ],
   "comments": [

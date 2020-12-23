@@ -16,15 +16,15 @@ const newProduct = {
     myCustomParam: "some string or json for custom param"
 };
 
-// axios
-//     .post("http://localhost:5000/products", newProduct)
-//     .then(newProduct => {
-//         console.log(newProduct)
-//         /*Do something with newProduct*/
-//     })
-//     .catch(err => {
-//         /*Do something with error, e.g. show error to user*/
-//     });
+axios
+    .post("http://localhost:5000/products", newProduct)
+    .then(newProduct => {
+        console.log(newProduct)
+        /*Do something with newProduct*/
+    })
+    .catch(err => {
+        /*Do something with error, e.g. show error to user*/
+    });
 
 fetch('/products')
     .then(response => response.json())

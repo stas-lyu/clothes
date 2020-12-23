@@ -4,7 +4,7 @@
       "name": "Lighter Clipper Metal Large Green Leaves, w/case",
       "currentPrice": 350,
       "previousPrice": 300,
-      "categories": "Lighters",
+      "categories": "lighters",
       "imageUrls": [
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/c/_clipper_metal_large_green_leaves55.jpg",
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/c/_clipper_metal_large_green_leaves.jpg",
@@ -28,7 +28,7 @@
     {
       "name": "Lighter Clipper Metal Large Yellow Mexican Skull, w/case",
       "currentPrice": 350,
-      "categories": "Lighters",
+      "categories": "lighters",
       "imageUrls": [
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/c/l/clipper_metal_large_gold_mex_skulls4.jpg",
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/c/l/clipper_metal_large_gold_mex_skulls2.jpg"
@@ -52,7 +52,7 @@
       "name": "Lighter Clipper Metal Large Silver Mexican Skull, w/case",
       "currentPrice": 310,
       "previousPrice": 350,
-      "categories": "Lighters",
+      "categories": "lighters",
       "imageUrls": [
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/c/l/clipper_metal_large_silver_mex_skulls3.jpg",
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/c/l/clipper_metal_large_silver_mex_skulls6.jpg"
@@ -76,7 +76,7 @@
       "name": "Belt HUF Domestic Military Poppy",
       "currentPrice": 599,
       "previousPrice": 629,
-      "categories": "Belts",
+      "categories": "belts",
       "imageUrls": [
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/c/ac00306_1.jpg"
       ],
@@ -101,7 +101,7 @@
       "name": "Belt HUF Easy Scout Belt Black/Black",
       "currentPrice": 799,
       "previousPrice": 857,
-      "categories": "Belts",
+      "categories": "belts",
       "imageUrls": [
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/e/a/easy-scout-belt_black-black_ac00412_bkblk_01_1024x1024_2x.jpg"
       ],
@@ -129,7 +129,7 @@
       "name": "Hat SHIFT Watchman Orange",
       "currentPrice": 420.00,
       "previousPrice": 840.00,
-      "categories": "accessories",
+      "categories": "hats",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650375/hats/11_7_1_1_kx69as.jpg","https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650375/hats/123021078_5418716728153479_6623030594798791618_o_xfbpnz.jpg"],
       "quantity": 50,
       "color": "orange",
@@ -143,7 +143,7 @@
       "name": "THRASHER Logo Patch Beanie Camo O/S",
       "currentPrice": 679.00,
       "previousPrice": 900.00,
-      "categories": "accessories",
+      "categories": "hats",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650375/hats/thrasher-logo-patch-beanie-camo_nvgice.jpg"],
       "quantity": 50,
       "color": "multicolor",
@@ -157,7 +157,7 @@
       "name": "Hat 47 Brand Raised New York Yankees Black",
       "currentPrice": 620.00,
       "previousPrice": 840.00,
-      "categories": "accessories",
+      "categories": "hats",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650374/hats/b-rkn17ace-nyd_pge9mu.jpg","https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650374/hats/brkn17acenyd-2_s6glxk.jpg"],
       "quantity": 100,
       "color": "black",
@@ -171,7 +171,7 @@
       "name": "Hat The North Face TNF Logo Box Cuffed Beanie Tnf Navy2",
       "currentPrice": 999.00,
       "previousPrice": 1200.00,
-      "categories": "accessories",
+      "categories": "hats",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650374/hats/_the_north_face_tnf_logo_box_cuffed_beanie_tnf_navy_t9o7fs.jpg","https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650374/hats/_1__3_he0v6k.png", "https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650374/hats/_2__1_1_anhoka.png"],
       "quantity": 20,
       "color": "navy",
@@ -184,7 +184,7 @@
       "name": "Hat Nixon Kos Heather Navy",
       "currentPrice": 665.00,
       "previousPrice": 1330.00,
-      "categories": "accessories",
+      "categories": "hats",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650375/hats/c2454-307-view1_1_k5irsu.jpg"],
       "quantity": 45,
       "color": "navy",
@@ -197,7 +197,7 @@
     {
       "name": "Cap HUF Haze Contrast 6 Panel Forest",
       "currentPrice": 990.00,
-      "categories": "accessories",
+      "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711385/caps/haze-contrast-6-panel_forest_ht00483_forst_01_1024x1024_2x_xjlsss.jpg"],
       "quantity": 10,
       "color": "green",
@@ -211,7 +211,7 @@
     {
       "name": "Panama HUF Fuck It Reversible Bucket White",
       "currentPrice": 1045.00,
-      "categories": "accessories",
+      "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711385/caps/fuck-it-reversible-bucket-hat_black-white_ht00496_bkwht_02_1024x1024_qaykfo.jpg"],
       "quantity": 15,
       "color": "white",
@@ -224,7 +224,7 @@
     {
       "name": "47 Toronto Maple Leafs Clean Up Cap",
       "currentPrice": 799.00,
-      "categories": "accessories",
+      "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/ezgif-7-7fdd601b5529_jjv9hj.jpg", "https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711385/caps/ezgif-7-44ec410db72e_zhkyjm.jpg"],
       "quantity": 7,
       "color": "blue",
@@ -237,7 +237,7 @@
     {
       "name": "Panama 47 Striped Los Angeles Dodgers",
       "currentPrice": 849.00,
-      "categories": "accessories",
+      "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/ezgif-7-c09277542469_twhonj.jpg", ",https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/ezgif-7-3337b6a9929e_mnbvu2.jpg", "https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/4-1076x1612_a1ajjl.jpg"],
       "quantity": 6,
       "color": "white",
@@ -251,7 +251,7 @@
     {
       "name": "Nixon Prep Strapback Cap Red",
       "currentPrice": 1225.00,
-      "categories": "accessories",
+      "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/c2784-2990-view1_ix5mcy.jpg", "https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/c2784-2990-view2_sv2apo.jpg"],
       "quantity": 13,
       "color": "red",
@@ -265,7 +265,7 @@
     {
       "name": "Cap THRASHER Outlined Snapback Gray",
       "currentPrice": 799.00,
-      "categories": "accessories",
+      "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/ezgif-2-c7d412856d51_o2kbon.jpg"],
       "quantity": 8,
       "color": "gray",
@@ -307,26 +307,26 @@
       "brand":" Nixon ",
       "parametrs":[" The elder brother of the popular Time Teller made of polyurethane in bright colors, as it should be, is stylish, solid, strict and restrained in colors. ", " For those who love hard materials.. "],
       "description":[ " Mechanism: Japanese quartz movement Miyota Functions: hours, minutes, seconds Accuracy 1/20 second. Housing: Width 39.25 mm One-piece case with screw-on cover and crown Stainless steel Water resistance 100 m (10 ATM) Reinforced mineral glass Triple seal crown."]
-        },{
-          "name": " Casio G-Shock GA-2100-4AER Red Watch",
-          "currentPrice": 4590.00,
-          "categories": "watch",
-          "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100-4aer.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100-4aer-6.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100-4aer-3.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-2-1536x1024.jpg"],
-          "quantity": 50,
-          "color": "red",
-          "productUrl":"/watch",
-          "brand":" Casio ",
-          "parametrs":[" By its characteristic appearance, you can immediately determine that this is a Casio watch, made in a dynamic case and a good color scheme. The watch mechanism is electronic, quartz, Japanese production. The strap and case are constructed from a polymer with excellent wear resistance. "],
-          "description":[ " The origin of the Japanese company Casio goes back to the deep forties of the last century .. Its founder was a humble boy Tadao Kasio. Since childhood, Tadao has shown incredible abilities and an extraordinary thirst for knowledge. The young man's talents were noticed by the managers of the plant where he worked in order to financially help the family. The company paid for the guy's higher education, which later allowed him to open his own business with his brothers. "]
-        },{
-          "name": " Casio G-Shock GA-2100THS-1AER Black / Purple Watch ",
-          "currentPrice": 5830.00,
-          "categories": "watch",
-          "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100ths-1aer.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100ths-1aer-1.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-4-1536x1024.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-5-1536x1024.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-6-1536x1024.jpg "],
-          "quantity": 50,
-          "color": "black / purple",
-          "productUrl":"/watch",
-          "brand":" Casio ",
-          "parametrs":["By its characteristic appearance, you can immediately determine that this is a Casio watch, made in a dynamic case and a good color scheme. The watch mechanism is electronic, quartz, Japanese production. The strap and case are constructed from a polymer with excellent wear resistance."],
-            "description":[ " Initially, the Casio brand, officially registered in 1957, produced microcircuits, calculators, various spare parts for microscopes and electronic parts. In the same year, the company's developers invented and patented an electric micro-calculator. Casio became a monopoly on the Japanese electronics market and thundered all over the world. CASIO's corporate credo is creativity and contribution."]}]
+    },{
+      "name": " Casio G-Shock GA-2100-4AER Red Watch",
+      "currentPrice": 4590.00,
+      "categories": "watch",
+      "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100-4aer.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100-4aer-6.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100-4aer-3.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-2-1536x1024.jpg"],
+      "quantity": 50,
+      "color": "red",
+      "productUrl":"/watch",
+      "brand":" Casio ",
+      "parametrs":[" By its characteristic appearance, you can immediately determine that this is a Casio watch, made in a dynamic case and a good color scheme. The watch mechanism is electronic, quartz, Japanese production. The strap and case are constructed from a polymer with excellent wear resistance. "],
+      "description":[ " The origin of the Japanese company Casio goes back to the deep forties of the last century .. Its founder was a humble boy Tadao Kasio. Since childhood, Tadao has shown incredible abilities and an extraordinary thirst for knowledge. The young man's talents were noticed by the managers of the plant where he worked in order to financially help the family. The company paid for the guy's higher education, which later allowed him to open his own business with his brothers. "]
+    },{
+      "name": " Casio G-Shock GA-2100THS-1AER Black / Purple Watch ",
+      "currentPrice": 5830.00,
+      "categories": "watch",
+      "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100ths-1aer.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/g/a/ga-2100ths-1aer-1.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-4-1536x1024.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-5-1536x1024.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/y/o/youtube-casio-g-shock-ga-2100-6-1536x1024.jpg "],
+      "quantity": 50,
+      "color": "black / purple",
+      "productUrl":"/watch",
+      "brand":" Casio ",
+      "parametrs":["By its characteristic appearance, you can immediately determine that this is a Casio watch, made in a dynamic case and a good color scheme. The watch mechanism is electronic, quartz, Japanese production. The strap and case are constructed from a polymer with excellent wear resistance."],
+      "description":[ " Initially, the Casio brand, officially registered in 1957, produced microcircuits, calculators, various spare parts for microscopes and electronic parts. In the same year, the company's developers invented and patented an electric micro-calculator. Casio became a monopoly on the Japanese electronics market and thundered all over the world. CASIO's corporate credo is creativity and contribution."]}]
 }

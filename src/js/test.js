@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const newProduct = {
     name: "new product for testing purposes",
     currentPrice: 199.99,
@@ -29,3 +30,8 @@ const newProduct = {
 // fetch('/products')
 //     .then(response => response.json())
 //     .then(json => console.log(json));
+=======
+fetch('/products')
+    .then(response => response.json())
+    .then(json => console.log(json));
+>>>>>>> 7af2bf94a42541478768e70550616acce32402f5

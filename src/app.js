@@ -1,2 +1,5 @@
-import './js/test.js'
+// import './js/test.js'
+import './js/pavlutska.js'
 import './scss/base.scss'
+import './scss/fonts.scss'
+import './scss/search.scss'

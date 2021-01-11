@@ -26,6 +26,6 @@ const newProduct = {
 //         /*Do something with error, e.g. show error to user*/
 //     });
 
-fetch('/products')
-    .then(response => response.json())
-    .then(json => console.log(json));
+// fetch('/products')
+//     .then(response => response.json())
+//     .then(json => console.log(json));

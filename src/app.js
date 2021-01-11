@@ -1,7 +1,7 @@
 import './scss/base.scss'
 import './js/alex.js'
 import './js/modalWindow.js'
-import "./js/search.js";
+import './js/pavlutska.js'
 import "./scss/search.scss";
 import "./scss/fonts.scss";
 import './scss/StylemodalWindow.scss'

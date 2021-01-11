@@ -22,7 +22,7 @@ function newBox(timerBody, endOfAction){
     img.style.cssText = `width: 100%;
     height: 123px;
     object-fit: cover;`;
-    img.setAttribute("src", "img/timer.jpg");
+    img.setAttribute("src", "src/img/timer.jpg");
     box.append(img);
 
     let p = document.createElement("p");

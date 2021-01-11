@@ -1,5 +1,6 @@
-import './js/test.js'
 import './scss/base.scss'
 import './js/alex.js'
+import './js/modalWindow.js'
+import './scss/StylemodalWindow.scss'
 import './scss/alex.scss'
 import './scss/typography.scss'

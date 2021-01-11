@@ -8,6 +8,37 @@
 </head>
 <body>
 
+    <div id="my_modal" class="modal">
+        <div class="modal_content">
+          <span class="close_modal_window">×</span>
+          <div class="order">
+          <p>Заказать</p>
+        </div>
+        <div class="customer_name">
+            <label>
+                <p>Имя</p>
+                <input type="text" class="name">
+            </label>
+            <label>
+                <p>E-mail</p>
+                <input type="text" class="email">
+            </label>
+            <label>
+                <p>Телефон</p>
+                <input type="number" class="phoneNumber">
+            </label>
+        </div>
+        <div class="btn_cansel_order">
+            <button id="cansel">Отмена</button>
+            <button id="order">Заказать</button>
+        </div>
+        </div>
+      </div>
+    
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="modalWindow.js"></script>
+
 <script type="text/javascript" src="dist/bundle.js"></script>
 </body>
 </html>

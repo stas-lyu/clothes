@@ -7,3 +7,5 @@ import "./scss/fonts.scss";
 import './scss/StylemodalWindow.scss'
 import './scss/alex.scss'
 import './scss/typography.scss'
+import './js/timer.js'
+import './scss/timer.scss'

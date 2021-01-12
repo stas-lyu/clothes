@@ -7,5 +7,8 @@ import "./scss/fonts.scss";
 import './scss/StylemodalWindow.scss'
 import './scss/alex.scss'
 import './scss/typography.scss'
+import './js/test.js'
 import './js/timer.js'
+import './js/newProducts.js'
 import './scss/timer.scss'
+import './js/newProducts.js'

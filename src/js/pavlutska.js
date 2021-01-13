@@ -9,7 +9,7 @@ headerSearchButton.click((event) => {
         return;
     }
 
-    fetch('http://localhost:5000/products?q=' + headerSearchInput.val())
+    fetch('/products?q=' + headerSearchInput.val())
         .then(response => {
             return response.json();
         })

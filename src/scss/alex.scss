@@ -70,7 +70,7 @@ body {
 }
 #products #newItems .slider-item::after {
 	content: '';
-	background: url("../img/new.png");
+	background: url("../../dist/img/new.png");
 	width: 34px;
 	height: 43px;
 	position: absolute;
@@ -80,7 +80,7 @@ body {
 }
 #products #recommend .slider-item::after {
 	content: '';
-	background: url("../img/recommend.png");
+	background: url("../../dist/img/recommend.png");
 	width: 34px;
 	height: 43px;
 	position: absolute;
@@ -90,7 +90,7 @@ body {
 }
 #products #sale .slider-item::after {
 	content: '';
-	background: url("../img/sale.png");
+	background: url("../../dist/img/sale.png");
 	width: 34px;
 	height: 43px;
 	position: absolute;

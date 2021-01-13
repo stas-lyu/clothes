@@ -3,9 +3,9 @@
     "start:dev": "webpack-dev-server",
     "json-server": "json-server --watch server/db.json --port 5000",
     "start-webpack-dev-server": "webpack serve",
-    "build": "webpack",
-    "start": "webpack --watch",
-    "dev": "concurrently \"npm run start\" \"npm run json-server\" \"npm run start-webpack-dev-server\""
+    "build": "webpack --mode productions",
+    "start": "webpack --watch --mode development",
+    "dev": "concurrently \"npm run start\" \"npm run json-server\" \"npm run start-webpack-dev-server\" --mode development"
   },
   "dependencies": {
     "json-server": "^0.16.3",

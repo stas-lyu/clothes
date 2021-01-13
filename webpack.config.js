@@ -6,7 +6,7 @@ module.exports = {
     entry: './src/app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'js/bundle.js'
     },
     devServer: {
         historyApiFallback: true,
@@ -52,5 +52,9 @@ module.exports = {
         ]
     },
 
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+      new MiniCssExtractPlugin({
+          filename: 'css/[name].css'
+      }
+    )],
 };

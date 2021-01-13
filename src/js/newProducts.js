@@ -116,28 +116,28 @@ axios
             let recommend = document.querySelector('#recommend .allNewProducts');
             let sale = document.querySelector('#sale .allNewProducts');
 
-            function changeLink(link, value) {
-                let windowWidth = document.documentElement.clientWidth;
-
-                if (windowWidth <= 1199) {
-                    link.innerHTML = `<svg 
- xmlns="http://www.w3.org/2000/svg"
- width="9px" height="24px">
-<image  x="0px" y="0px" width="9px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAYCAMAAAAfxSccAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgVBMVEVGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6v////dyEg5AAAAKXRSTlMAPK9BxMIGYWYK1uQabJcT4vk7gcAd7WSR4xgn9Z85NLa3F8EH5WfDQjL7mrQAAAABYktHRCpTvtSeAAAAB3RJTUUH5QEHETcgnGd4IwAAAHNJREFUCNdVj1kSglAQA1lEUXEBNwQV2e37X9AnAaw3X12ZykziuJ7vaBYES9EKQtF6wzYS7mAvOhyJE+EJzjJdrnCTmMI9Gyh/QCrxCfFroMKI75lKe/t3/K5U9mXzrW7sBHMqk7SNpvTd1KgfG7neR/AFKBcLgi3YMvMAAAAASUVORK5CYII=" />
-</svg>`
-                } else {
-                    link.innerHTML = value
-                }
-            }
+//             function changeLink(link, value) {
+//                 let windowWidth = document.documentElement.clientWidth;
+//
+//                 if (windowWidth <= 1199) {
+//                     link.innerHTML = `<svg
+//  xmlns="http://www.w3.org/2000/svg"
+//  width="9px" height="24px">
+// <image  x="0px" y="0px" width="9px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAYCAMAAAAfxSccAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgVBMVEVGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6v////dyEg5AAAAKXRSTlMAPK9BxMIGYWYK1uQabJcT4vk7gcAd7WSR4xgn9Z85NLa3F8EH5WfDQjL7mrQAAAABYktHRCpTvtSeAAAAB3RJTUUH5QEHETcgnGd4IwAAAHNJREFUCNdVj1kSglAQA1lEUXEBNwQV2e37X9AnAaw3X12ZykziuJ7vaBYES9EKQtF6wzYS7mAvOhyJE+EJzjJdrnCTmMI9Gyh/QCrxCfFroMKI75lKe/t3/K5U9mXzrW7sBHMqk7SNpvTd1KgfG7neR/AFKBcLgi3YMvMAAAAASUVORK5CYII=" />
+// </svg>`
+//                 } else {
+//                     link.innerHTML = value
+//                 }
+//             }
 
             changeArrow();
-            changeLink(products, `Все новинки`);
-            changeLink(recommend, `Все рекомендации`);
-            changeLink(sale, `Все товары`);
-            $(window).on('resize', () => changeArrow(), changeLink(products, `Все новинки`), changeLink(recommend, `Все рекомендации`), changeLink(sale, `Все товары`));
+            // changeLink(products, `Все новинки`);
+            // changeLink(recommend, `Все рекомендации`);
+            // changeLink(sale, `Все товары`);
+            // $(window).on('resize', () => changeArrow(), changeLink(products, `Все новинки`), changeLink(recommend, `Все рекомендации`), changeLink(sale, `Все товары`));
         });
     })
-    .then((data) => {
+    .then(() => {
         let modal = document.getElementById("my_modal");
         let btn = document.querySelectorAll('.btn_by');
         let span = document.getElementsByClassName("close_modal_window")[0];

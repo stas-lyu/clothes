@@ -1,0 +1,73 @@
+{
+    "hats": [
+        {
+            "name": "Hat SHIFT Watchman Orange",
+            "currentPrice": 420.00,
+            "previousPrice": 840.00,
+            "categories": "accessories",
+            "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650375/hats/11_7_1_1_kx69as.jpg","https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650375/hats/123021078_5418716728153479_6623030594798791618_o_xfbpnz.jpg"],
+            "quantity": 50,
+            "color": "orange",
+            "productUrl":"/hats",
+            "brand":" SHIFT",
+            "parametrs":["A SHIFT Watchman hat crafted from soft yarn.", "Traditional turn-up shape, ribbed knit and medium height.", "The hat is presented in a solid color, which is decorated with corporate branding. ", "A great addition to any outfit."],
+            "description":["The history of the SHIFT store is already 10 years old, and we started making our own merchandise in 2018. ",  
+              "By releasing clothes under our own brand, we do not seek to reinvent the wheel, but offer what we wear ourselves."]
+        },
+        {
+            "name": "THRASHER Logo Patch Beanie Camo O/S",
+            "currentPrice": 679.00,
+            "previousPrice": 900.00,
+            "categories": "accessories",
+            "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650375/hats/thrasher-logo-patch-beanie-camo_nvgice.jpg"],
+            "quantity": 50,
+            "color": "multicolor",
+            "productUrl":"/hats",
+            "brand":" THRASHER",
+            "parametrs":["A soft knit THRASHER hat with a snug fit to keep you warm in cold weather."],
+            "description":[ "This company appeared originally as a skateboarding magazine created in San Francisco, it covered various news, reviews, various photos and much more. ",  
+              "It appeared already in 1981 and was founded by three guys - Kevin Thatcher, Eric Swenson, and Fausto Vitello. The magazine still exists, and there is also an Internet version of it."]
+        },
+        {
+            "name": "Hat 47 Brand Raised New York Yankees Black",
+            "currentPrice": 620.00,
+            "previousPrice": 840.00,
+            "categories": "accessories",
+            "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650374/hats/b-rkn17ace-nyd_pge9mu.jpg","https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650374/hats/brkn17acenyd-2_s6glxk.jpg"],
+            "quantity": 100,
+            "color": "black",
+            "productUrl":"/hats",
+            "brand":"47 Brand",
+            "parametrs":["Black hat with embroidery.", "Composition: 100% acrylic.", "Hat 47 Brand Haymaker Detroit Tigers Black is the best option for everyday wear, outdoor activities in the cold season."],
+            "description":[ "Apparel and accessories brand 47 Brand is known primarily as the official partner for branded jerseys and caps of the major American sports leagues: baseball Mlb, football Nfl, basketball Nba and hockey Nhl, as well as more than 900 college teams. ",  
+              "The founders of the brand are twins Arthur and Henry D Angelo - Italian immigrants, who opened their company in 1947, from the very beginning putting on sports and selling snacks and branded souvenirs at sports events at Fenway Park Stadium in Boston. ",  "Ambition, work and love for the world of sports have led 47 to launch their own clothing line for sports fans as well as street style and American connoisseurs."]
+        },
+        {
+            "name": "Hat The North Face TNF Logo Box Cuffed Beanie Tnf Navy2",
+            "currentPrice": 999.00,
+            "previousPrice": 1200.00,
+            "categories": "accessories",
+            "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650374/hats/_the_north_face_tnf_logo_box_cuffed_beanie_tnf_navy_t9o7fs.jpg","https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650374/hats/_1__3_he0v6k.png", "https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650374/hats/_2__1_1_anhoka.png"],
+            "quantity": 20,
+            "color": "navy",
+            "productUrl":"/hats",
+            "brand":"The North Face",
+            "parametrs":["From dawn to dusk, our classic Logo Box beanie with cuffs will keep you warm. The acrylic yarn is stretchy but surprisingly soft so it won't get out of shape or make you scratch your head.", "Material: 100% acrylic"],
+            "description":[""]
+        },
+        {
+            "name": "Hat Nixon Kos Heather Navy",
+            "currentPrice": 665.00,
+            "previousPrice": 1330.00,
+            "categories": "accessories",
+            "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608650375/hats/c2454-307-view1_1_k5irsu.jpg"],
+            "quantity": 45,
+            "color": "navy",
+            "productUrl":"/hats",
+            "brand":"Nixon",
+            "parametrs":["Hat with a lapel made of acrylic fabric and wool, which protects well from cold, wind and moisture.", "The basic silhouette is complemented by a brand logo patch."],
+            "description":[ "The American brand Nixon pleases its customers with a variety of not only high-quality clothes, but also the production of watches and other accessories!",  
+              "This brand is very popular among young people, namely those who love and devote their free time to sports."]
+        }
+    ]
+}

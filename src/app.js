@@ -1,4 +1,7 @@
 import './js/modalWindow.js'
+import './js/pavlutska.js'
+import "./scss/search.scss";
+import "./scss/fonts.scss";
 import './scss/StylemodalWindow.scss'
 import './scss/alex.scss'
 import './scss/typography.scss'

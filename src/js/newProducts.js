@@ -11,7 +11,6 @@ axios
         });
     })
     .then((data) => {
-        console.log(data)
         data.map((item => {
             let div = document.createElement('div');
             let img = document.createElement('img');
@@ -24,7 +23,7 @@ axios
             let footerItem = document.createElement('div');
             let btnBuy = document.createElement('button');
             div.className = 'slider-item';
-            img.src = item.imageUrls[0];
+            img.src = item.imageUrls[0].split(',')[0];
             div.append(img);
             des.className = 'description';
             div.append(des);

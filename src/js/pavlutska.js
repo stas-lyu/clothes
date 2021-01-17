@@ -1,32 +1,43 @@
+import {
+    createNewCard,
+    initSlick,
+    changeArrow
+} from './newProducts';
 const headerSearchInput = $('.header_search_input');
 const headerSearchButton = $('.header_search_button');
+const searchResult = $('#search_result .multiple-items');
+let slickActive = false;
 
 headerSearchButton.click((event) => {
-    let inputStyle = window.getComputedStyle(headerSearchInput[0]);
-    if (inputStyle.display == 'none') {
-        headerSearchInput[0].style.display = 'block';
+    if (headerSearchInput.css('display') == 'none') {
+        headerSearchInput.css('display', 'block');
         event.preventDefault();
         return;
     }
 
-    fetch('/products?q=' + headerSearchInput.val())
+    const searchInputVal = headerSearchInput.val();
+    if (searchInputVal == '' || searchInputVal == undefined) {
+        return;
+    }
+
+    fetch('/products?q=' + searchInputVal)
         .then(response => {
             return response.json();
         })
         .then(data => {
-            const searchResult = $('.search_result');
-            searchResult[0].innerHTML = '';
+            if (slickActive) {
+                searchResult.slick('unslick');
+                searchResult.empty();
+            }
             data.forEach(element => {
-                let item = new Item({
-                    name: element.name,
-                    brand: element.brand,
-                    color: element.color,
-                    price: element.currentPrice
-                });
-                searchResult.append(item.render());
+                let card = createNewCard(element);
+                searchResult.append(card);
             });
-
-            console.log(data);
+        }).then(() => {
+            $('#search_result').css('display', 'block');
+            initSlick(searchResult);
+            changeArrow();
+            slickActive = true;
         })
         .catch(err => {
             console.error(err);
@@ -34,24 +45,3 @@ headerSearchButton.click((event) => {
 
     event.preventDefault();
 });
-
-class Item {
-    constructor(options) {
-        this.name = options.name;
-        this.brand = options.brand;
-        this.color = options.color;
-        this.price = options.price;
-    }
-
-    render() {
-        let itemCard = document.createElement('div');
-        itemCard.classList.add('item');
-        let titleItem = document.createElement('h3');
-        titleItem.classList.add('titleItem');
-        titleItem.innerText = this.name;
-
-        itemCard.append(titleItem);
-
-        return itemCard;
-    }
-}

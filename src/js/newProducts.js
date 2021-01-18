@@ -102,9 +102,9 @@ axios
         return data;
     })
 
-    .then((data)=>{
+    .then((data) => {
         item_modal_window(data);
-      
+
     })
     .catch(err => {
         console.log(err)
@@ -162,12 +162,12 @@ export function initSlick(id) {
         prevArrow: `<div class="slick-custom-arrow slick-custom-arrow-right">
         </div>`,
         responsive: [{
-                breakpoint: 979,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
+            breakpoint: 979,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
             {
                 breakpoint: 749,
                 settings: {
@@ -214,76 +214,73 @@ export function changeArrow() {
     }
 }
 
-export function item_modal_window(data){
+export function item_modal_window(data) {
     let slider_item = document.querySelectorAll('.slick-slide')
     let product_modal_window = document.getElementById("product_modal_window");
     let span_close = document.getElementsByClassName("close_modal_window_product")[0];
     let modal_content = document.querySelector('.modal_content_product')
 
-  
-    
-  for(let key in slider_item){
-     slider_item[key].id = data[key].id;
-     console.log(data[key].id);
 
-     slider_item[key].onclick = function(event){
+    for (let key in slider_item) {
+        slider_item[key].id = data[key].id;
+        console.log(data[key].id);
 
-        
-    if(event.target.className !== 'btn_by'){
+        slider_item[key].onclick = function (event) {
 
+            if (event.target.className !== 'btn_by') {
 
-    let divProduct = document.createElement('div');
-    divProduct.className = 'divProduct'
-    let divPhoto = document.createElement('div')
-    divPhoto.className = 'divPhoto'
-    let divContent = document.createElement('div')
-    divContent.className = 'divContent'
-    modal_content.append(divProduct);
-    divProduct.append(divPhoto);
-    divProduct.append(divContent);
-    let photoImg = document.createElement('img');
-    photoImg.src = data[key].id.imageUrls[0].split(',')[0];
-    divPhoto.append(photoImg)
-    let h2 = document.createElement('h2');
-    h2.className = 'heading'
-    h2.innerHTML = data[key].id.name;
-    divContent.append(h2);
-    let paragBrend = document.createElement('p');
-    paragBrend.className = 'paragBrand'
-    paragBrend.innerHTML = `<b>Brand:</b> <a href="#">${data[key].id.brand}</a>` ;
-    divContent.append(paragBrend)
-    let parametrs = document.createElement('p');
-    parametrs.innerHTML = `<b>Parametrs:</b> ${data[key].id.parametrs[0]}`
-    divContent.append(parametrs)
-    let productColor = document.createElement('p');
-    productColor.innerHTML = `<b>Color:</b> ${data[key].id.color}`
-    divContent.append(productColor)
-    let costPrice = document.createElement('p')
-    costPrice.className = 'costPrice'
-    costPrice.innerHTML = `CurrentPrice: <span class="spanText">${data[key].id.currentPrice*1.2}</span> <b>${data[this.id].currentPrice}</b>`
-    divContent.append(costPrice)
-    let btnOrder = document.createElement('button');
-    btnOrder.className = 'btnOrder';
-    btnOrder.innerHTML = 'Заказать'
-    divContent.append(btnOrder)
-    
-        product_modal_window.style.display = "block";
-     }
-         span_close.onclick = function () {
-            product_modal_window.style.display = "none";
-            let product = document.querySelector('.divProduct')
-            product.remove()
-         }
-        
-         window.onclick = function (event) {
-            if (event.target == product_modal_window) {
+                let divProduct = document.createElement('div');
+                divProduct.className = 'divProduct';
+                let divPhoto = document.createElement('div');
+                divPhoto.className = 'divPhoto';
+                let divContent = document.createElement('div');
+                divContent.className = 'divContent';
+                modal_content.append(divProduct);
+                divProduct.append(divPhoto);
+                divProduct.append(divContent);
+                let photoImg = document.createElement('img');
+                photoImg.src = data[key].id.imageUrls[0].split(',')[0];
+                divPhoto.append(photoImg);
+                let h2 = document.createElement('h2');
+                h2.className = 'heading';
+                h2.innerHTML = data[key].id.name;
+                divContent.append(h2);
+                let paragBrend = document.createElement('p');
+                paragBrend.className = 'paragBrand';
+                paragBrend.innerHTML = `<b>Brand:</b> <a href="#">${data[key].id.brand}</a>`;
+                divContent.append(paragBrend);
+                let parametrs = document.createElement('p');
+                parametrs.innerHTML = `<b>Parametrs:</b> ${data[key].id.parametrs[0]}`;
+                divContent.append(parametrs);
+                let productColor = document.createElement('p');
+                productColor.innerHTML = `<b>Color:</b> ${data[key].id.color}`;
+                divContent.append(productColor);
+                let costPrice = document.createElement('p');
+                costPrice.className = 'costPrice';
+                costPrice.innerHTML = `CurrentPrice: <span class="spanText">${data[key].id.currentPrice * 1.2}</span> <b>${data[this.id].currentPrice}</b>`
+                divContent.append(costPrice);
+                let btnOrder = document.createElement('button');
+                btnOrder.className = 'btnOrder';
+                btnOrder.innerHTML = 'Заказать';
+                divContent.append(btnOrder);
+
+                product_modal_window.style.display = "block";
+            }
+            span_close.onclick = function () {
                 product_modal_window.style.display = "none";
                 let product = document.querySelector('.divProduct')
-            product.remove()
+                product.remove()
+            };
+
+            window.onclick = function (event) {
+                if (event.target == product_modal_window) {
+                    product_modal_window.style.display = "none";
+                    let product = document.querySelector('.divProduct')
+                    product.remove()
+                }
             }
-    }
-   
-    
+
+
         }
-     }
     }
+}

@@ -30,12 +30,12 @@ headerSearchButton.click((event) => {
                 searchResult.slick('unslick');
                 searchResult.empty();
             }
-            data.forEach(element => {
+             data.forEach(element => {
                 let card = createNewCard(element);
                 searchResult.append(card);
             });
             return data;
-        }).then(() => {
+        }).then((data) => {
             $('#search_result').css('display', 'block');
             initSlick(searchResult);
             changeArrow();

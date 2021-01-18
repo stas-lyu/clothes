@@ -224,17 +224,15 @@ export function item_modal_window(data){
     
   for(let key in slider_item){
      slider_item[key].id = data[key].id;
-     console.log(data[key].id)
+     console.log(data[key].id);
 
      slider_item[key].onclick = function(event){
-  
-    
+
         
     if(event.target.className !== 'btn_by'){
 
 
-        
-       let divProduct = document.createElement('div');
+    let divProduct = document.createElement('div');
     divProduct.className = 'divProduct'
     let divPhoto = document.createElement('div')
     divPhoto.className = 'divPhoto'

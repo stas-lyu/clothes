@@ -1,7 +1,8 @@
 import {
     createNewCard,
     initSlick,
-    changeArrow
+    changeArrow,
+    item_modal_window,
 } from './newProducts';
 const headerSearchInput = $('.header_search_input');
 const headerSearchButton = $('.header_search_button');
@@ -33,11 +34,13 @@ headerSearchButton.click((event) => {
                 let card = createNewCard(element);
                 searchResult.append(card);
             });
+            return data;
         }).then(() => {
             $('#search_result').css('display', 'block');
             initSlick(searchResult);
             changeArrow();
             slickActive = true;
+            item_modal_window(data);
         })
         .catch(err => {
             console.error(err);

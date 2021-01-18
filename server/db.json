@@ -2,6 +2,7 @@
   "products": [
     {
       "name": "Lighter Clipper Metal Large Green Leaves, w/case",
+      "id": "lighters_1",
       "currentPrice": 350,
       "previousPrice": 300,
       "categories": "lighters",
@@ -17,7 +18,6 @@
       "myCustomParam": [
         ""
       ],
-      "id": 2000000456737,
       "description": [
         "Spanish world famous Clipper lighters.",
         "Clipper metal Leaves Green - green hemp leaves on a black background, there are options with a black or green top.",
@@ -29,6 +29,7 @@
       "name": "Lighter Clipper Metal Large Yellow Mexican Skull, w/case",
       "currentPrice": 350,
       "categories": "lighters",
+      "id": "lighters_3",
       "imageUrls": [
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/c/l/clipper_metal_large_gold_mex_skulls4.jpg",
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/c/l/clipper_metal_large_gold_mex_skulls2.jpg"
@@ -40,7 +41,6 @@
       "myCustomParam": [
         ""
       ],
-      "id": 2000000456744,
       "description": [
         "Spanish world famous Clipper lighters.",
         "Clipper metal Leaves Green - green hemp leaves on a black background, there are options with a black or green top.",
@@ -51,6 +51,7 @@
     {
       "name": "Lighter Clipper Metal Large Silver Mexican Skull, w/case",
       "currentPrice": 310,
+      "id": "lighters_4",
       "previousPrice": 350,
       "categories": "lighters",
       "imageUrls": [
@@ -64,7 +65,6 @@
       "myCustomParam": [
         ""
       ],
-      "id": 2000000456751,
       "description": [
         "Spanish world famous Clipper lighters.",
         "Clipper metal Leaves Green - green hemp leaves on a black background, there are options with a black or green top.",
@@ -77,6 +77,7 @@
       "currentPrice": 599,
       "previousPrice": 629,
       "categories": "belts",
+      "id": "belts_1",
       "imageUrls": [
         "https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/c/ac00306_1.jpg"
       ],
@@ -91,7 +92,6 @@
         "One size fits most",
         "57'' length"
       ],
-      "id": 2000000426594,
       "description": [
         "The HUF Domestic Military Belt in Poppy Red features a durable webbed construction with all-over jacquard HUF Worldwide branding.",
         "Inspired by heritage military design, the belt is secured with an anti-nickel finish buckle engraved with a ‘HUF Original Logo.’ 90s vibes."
@@ -116,7 +116,7 @@
         "One size fits most",
         "57'' length"
       ],
-      "id": 2000000447889,
+      "id": "belts_2",
       "description": [
         "Webbed nylon military belt w/ reflective logo taping",
         "Metal buckle with embossed logo and bottle opener",
@@ -127,6 +127,7 @@
     },
     {
       "name": "Hat SHIFT Watchman Orange",
+      "id": "hats_1",
       "currentPrice": 420.00,
       "previousPrice": 840.00,
       "categories": "hats",
@@ -141,6 +142,7 @@
     },
     {
       "name": "THRASHER Logo Patch Beanie Camo O/S",
+      "id": "hats_2",
       "currentPrice": 679.00,
       "previousPrice": 900.00,
       "categories": "hats",
@@ -155,6 +157,7 @@
     },
     {
       "name": "Hat 47 Brand Raised New York Yankees Black",
+      "id": "hats_3",
       "currentPrice": 620.00,
       "previousPrice": 840.00,
       "categories": "hats",
@@ -169,6 +172,7 @@
     },
     {
       "name": "Hat The North Face TNF Logo Box Cuffed Beanie Tnf Navy2",
+      "id": "hats_4",
       "currentPrice": 999.00,
       "previousPrice": 1200.00,
       "categories": "hats",
@@ -182,6 +186,7 @@
     },
     {
       "name": "Hat Nixon Kos Heather Navy",
+      "id": "hats_5",
       "currentPrice": 665.00,
       "previousPrice": 1330.00,
       "categories": "hats",
@@ -196,6 +201,7 @@
     },
     {
       "name": "Cap HUF Haze Contrast 6 Panel Forest",
+      "id": "caps_1",
       "currentPrice": 990.00,
       "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711385/caps/haze-contrast-6-panel_forest_ht00483_forst_01_1024x1024_2x_xjlsss.jpg"],
@@ -210,6 +216,7 @@
 
     {
       "name": "Panama HUF Fuck It Reversible Bucket White",
+      "id": "caps_2",
       "currentPrice": 1045.00,
       "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711385/caps/fuck-it-reversible-bucket-hat_black-white_ht00496_bkwht_02_1024x1024_qaykfo.jpg"],
@@ -223,6 +230,7 @@
 
     {
       "name": "47 Toronto Maple Leafs Clean Up Cap",
+      "id": "caps_3",
       "currentPrice": 799.00,
       "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/ezgif-7-7fdd601b5529_jjv9hj.jpg", "https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711385/caps/ezgif-7-44ec410db72e_zhkyjm.jpg"],
@@ -236,6 +244,7 @@
 
     {
       "name": "Panama 47 Striped Los Angeles Dodgers",
+      "id": "caps_4",
       "currentPrice": 849.00,
       "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/ezgif-7-c09277542469_twhonj.jpg", ",https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/ezgif-7-3337b6a9929e_mnbvu2.jpg", "https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/4-1076x1612_a1ajjl.jpg"],
@@ -250,6 +259,7 @@
 
     {
       "name": "Nixon Prep Strapback Cap Red",
+      "id": "caps_6",
       "currentPrice": 1225.00,
       "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/c2784-2990-view1_ix5mcy.jpg", "https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/c2784-2990-view2_sv2apo.jpg"],
@@ -264,6 +274,7 @@
 
     {
       "name": "Cap THRASHER Outlined Snapback Gray",
+      "id": "caps_7",
       "currentPrice": 799.00,
       "categories": "caps",
       "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/ezgif-2-c7d412856d51_o2kbon.jpg"],

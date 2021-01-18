@@ -215,15 +215,18 @@ export function changeArrow() {
 }
 
 export function item_modal_window(data) {
-    let slider_item = document.querySelectorAll('.slick-slide')
+    let slider_item = [...document.querySelectorAll('.slick-slide')];
     let product_modal_window = document.getElementById("product_modal_window");
     let span_close = document.getElementsByClassName("close_modal_window_product")[0];
-    let modal_content = document.querySelector('.modal_content_product')
+    let modal_content = document.querySelector('.modal_content_product');
 
+    for (let key of slider_item) {
 
-    for (let key in slider_item) {
+        console.log(data[key] + 'This data key');
+
+        console.log("slider_item.id" + slider_item.id + "slider_item.id" + slider_item[key].id);
+
         slider_item[key].id = data[key].id;
-        console.log(data[key].id);
 
         slider_item[key].onclick = function (event) {
 
@@ -239,25 +242,25 @@ export function item_modal_window(data) {
                 divProduct.append(divPhoto);
                 divProduct.append(divContent);
                 let photoImg = document.createElement('img');
-                photoImg.src = data[key].id.imageUrls[0].split(',')[0];
+                photoImg.src = data[key].imageUrls[0].split(',')[0];
                 divPhoto.append(photoImg);
                 let h2 = document.createElement('h2');
                 h2.className = 'heading';
-                h2.innerHTML = data[key].id.name;
+                h2.innerHTML = data[key].name;
                 divContent.append(h2);
                 let paragBrend = document.createElement('p');
                 paragBrend.className = 'paragBrand';
-                paragBrend.innerHTML = `<b>Brand:</b> <a href="#">${data[key].id.brand}</a>`;
+                paragBrend.innerHTML = `<b>Brand:</b> <a href="#">${data[key].brand}</a>`;
                 divContent.append(paragBrend);
                 let parametrs = document.createElement('p');
-                parametrs.innerHTML = `<b>Parametrs:</b> ${data[key].id.parametrs[0]}`;
+                parametrs.innerHTML = `<b>Parametrs:</b> ${data[key].parametrs[0]}`;
                 divContent.append(parametrs);
                 let productColor = document.createElement('p');
-                productColor.innerHTML = `<b>Color:</b> ${data[key].id.color}`;
+                productColor.innerHTML = `<b>Color:</b> ${data[key].color}`;
                 divContent.append(productColor);
                 let costPrice = document.createElement('p');
                 costPrice.className = 'costPrice';
-                costPrice.innerHTML = `CurrentPrice: <span class="spanText">${data[key].id.currentPrice * 1.2}</span> <b>${data[this.id].currentPrice}</b>`
+                costPrice.innerHTML = `CurrentPrice: <span class="spanText">${data[key].currentPrice * 1.2}</span> <b>${data[key].currentPrice}</b>`
                 divContent.append(costPrice);
                 let btnOrder = document.createElement('button');
                 btnOrder.className = 'btnOrder';

@@ -222,11 +222,9 @@ export function item_modal_window(data) {
 
     for (let key of slider_item) {
 
-        console.log(data[key] + 'This data key');
-
-        console.log("slider_item.id" + slider_item.id + "slider_item.id" + slider_item[key].id);
-
         slider_item[key].id = data[key].id;
+
+        console.log("data key is " + data[key].id);
 
         slider_item[key].onclick = function (event) {
 
@@ -286,4 +284,5 @@ export function item_modal_window(data) {
 
         }
     }
+
 }

@@ -44,7 +44,7 @@
     </div>
 
     <div id="my_modal" class="modal">
-        <div class="modal_content">
+        <form class="modal_content" method="post" action="send.php">
             <span class="close_modal_window">×</span>
             <div class="order">
                 <p>Заказать</p>
@@ -52,22 +52,22 @@
             <div class="customer_name">
                 <label>
                     <p>Имя</p>
-                    <input type="text" class="name">
+                    <input type="text" name="fio" class="name">
                 </label>
                 <label>
                     <p>E-mail</p>
-                    <input type="text" class="email">
+                    <input type="text" name="email" class="email">
                 </label>
                 <label>
                     <p>Телефон</p>
-                    <input type="number" class="phoneNumber">
+                    <input type="number" name="tel" class="phoneNumber">
                 </label>
             </div>
             <div class="btn_cansel_order">
                 <button id="cansel">Отмена</button>
-                <button id="order">Заказать</button>
+                <input type="submit" id="order">Заказать
             </div>
-        </div>
+        </form>
     </div>
 
     <div id="product_modal_window" class="product_modal_window">

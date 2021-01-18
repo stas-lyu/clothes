@@ -31,7 +31,6 @@ headerSearchButton.click((event) => {
                 searchResult.empty();
             }
              data.forEach(element => {
-                 console.log('pavlutska js' + element);
                 let card = createNewCard(element);
                 searchResult.append(card);
             });

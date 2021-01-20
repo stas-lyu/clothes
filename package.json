@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start:dev": "webpack-dev-server",
-    "json-server": "json-server --watch server/db.json --port 5000",
+    "json-server": "json-server --watch db.json --port 5000",
     "start-webpack-dev-server": "webpack serve",
     "build": "webpack --mode production",
     "start": "webpack --watch --mode development",

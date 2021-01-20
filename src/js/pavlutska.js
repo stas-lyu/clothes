@@ -42,9 +42,9 @@ headerSearchButton.click((event) => {
             slickActive = true;
             item_modal_window(data);
         })
-        .catch(err => {
-            console.error(err);
-        });
+        // .catch(err => {
+        //     console.error(err);
+        // });
 
     event.preventDefault();
 });

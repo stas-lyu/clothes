@@ -51,61 +51,14 @@ axios
 
         return data;
     })
-    .then((data) => {
-        console.log(data);
-        let modal = document.getElementById("my_modal");
-        let modalContent = document.querySelector("#my_modal .modal_content");
-        let btn = document.querySelectorAll('.btn_by');
-        let span = document.getElementsByClassName("close_modal_window")[0];
-        let close = document.querySelector('#cansel');
-
-        for (let key of btn) {
-            key.onclick = function (e) {
-                let div = document.createElement('div');
-                div.className = 'card';
-                modal.style.display = "block";
-                console.log(e.target.id);
-                let newData = data.filter((item) => {
-                    return item.id == e.target.id
-                });
-
-                newData.map((item) => {
-                    let title = document.createElement(('h4'));
-                    title.innerHTML = "";
-                    title.innerHTML = item.name;
-                    div.append(title);
-                    modalContent.prepend(div);
-                })
-            }
-        }
-
-        let deleteCard = function () {
-            let card = document.querySelector(".card");
-            card.remove()
-        };
-
-        span.onclick = function () {
-            modal.style.display = "none";
-            deleteCard()
-        };
-
-        close.onclick = function () {
-            deleteCard();
-            modal.style.display = "none";
-        };
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                deleteCard();
-            }
-        };
-        return data;
-    })
+    
 
     .then((data) => {
         item_modal_window(data);
+        item_Prodocuts_Modal_Window();
 
     })
+
     .catch(err => {
         console.log(err)
         /*Do something with error, e.g. show error to user*/
@@ -220,6 +173,7 @@ export function item_modal_window(data) {
     let span_close = document.getElementsByClassName("close_modal_window_product")[0];
     let modal_content = document.querySelector('.modal_content_product');
 
+
     for (let key in slider_item) {
        
 
@@ -248,9 +202,6 @@ export function item_modal_window(data) {
                 paragBrend.className = 'paragBrand';
                 paragBrend.innerHTML = `<b>Brand:</b> <a href="#">${data[key].brand}</a>`;
                 divContent.append(paragBrend);
-                let parametrs = document.createElement('p');
-                parametrs.innerHTML = `<b>Parametrs:</b> ${data[key].parametrs[0]}`;
-                divContent.append(parametrs);
                 let productColor = document.createElement('p');
                 productColor.innerHTML = `<b>Color:</b> ${data[key].color}`;
                 divContent.append(productColor);
@@ -265,7 +216,6 @@ export function item_modal_window(data) {
                 btnOrder.className = 'btnOrder';
                 btnOrder.innerHTML = 'Заказать';
                 divContent.append(btnOrder);
-
                 product_modal_window.style.display = "block";
             }
             span_close.onclick = function () {
@@ -286,4 +236,54 @@ export function item_modal_window(data) {
         }
     }
 
+}
+
+
+function item_Prodocuts_Modal_Window(){
+    let modal = document.getElementById("my_modal");
+    let modalContent = document.querySelector("#my_modal .modal_content");
+    let btn = document.querySelector('.btnOrder');
+    console.log(btn)
+    let span = document.getElementsByClassName("close_modal_window")[0];
+    let close = document.querySelector('#cansel');
+
+    for (let key of btn) {
+        key.onclick = function (e) {
+            let div = document.createElement('div');
+            div.className = 'card';
+            modal.style.display = "block";
+            console.log(e.target.id);
+            let newData = data.filter((item) => {
+                return item.id == e.target.id
+            });
+
+            newData.map((item) => {
+                let title = document.createElement(('h4'));
+                title.innerHTML = "";
+                title.innerHTML = item.name;
+                div.append(title);
+                modalContent.prepend(div);
+            })
+        }
+    }
+    let deleteCard = function () {
+        let card = document.querySelector(".card");
+        card.remove()
+    };
+
+    span.onclick = function () {
+        modal.style.display = "none";
+        deleteCard()
+    };
+
+    close.onclick = function () {
+        deleteCard();
+        modal.style.display = "none";
+    };
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            deleteCard();
+        }
+    };
 }

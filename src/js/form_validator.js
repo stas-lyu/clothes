@@ -14,9 +14,9 @@ $("#order").click(() => {
             'user_tel': tel,
         };
 
-        $.post('send.php', userInfo, function (otvet) {
-            rezultat = '<div style="color:#D80018;">' + otvet.text + '</div>';
-            $("#form_result").hide().html(rezultat).slideDown();
+        $.post('send.php', userInfo, function (response) {
+           let result = '<div style="color:#D80018;">' + response.text + '</div>';
+            $("#form_result").hide().html(result).slideDown();
         }, 'json');
     }
 });

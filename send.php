@@ -45,4 +45,3 @@ if($_POST)
         die($otvet_serv);
     }
 }
-?>

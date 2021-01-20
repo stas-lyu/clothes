@@ -1,68 +1,6 @@
 {
   "products": [
-    {
-      "name": "Nixon Prep Strapback Cap Red",
-      "id": "caps_6",
-      "currentPrice": 1225.00,
-      "categories": "caps",
-      "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/c2784-2990-view1_ix5mcy.jpg", "https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/c2784-2990-view2_sv2apo.jpg"],
-      "quantity": 13,
-      "color": "red",
-      "productUrl":"/cap",
-      "brand":"nixon",
-      "parametrs":["The emblem is on the front", "The inner edge is sewn with moisture-absorbing tape."],
-      "description":[ "The NIXON brand was established in the year one thousand nine hundred and ninety-eight. Its founders - Chad DiNenn and Andy Laats - at the initial stage of the brand's existence, preferred to pay attention to the manufacture of accessories for fans of extreme sports. Over the years, the NIXON assortment has grown, and the company's collections have begun to replenish with exclusive everyday watches."]
-    },
-    {
-      "name": "Cap THRASHER Outlined Snapback Gray",
-      "id": "caps_7",
-      "currentPrice": 799.00,
-      "categories": "caps",
-      "imageUrls":["https://res.cloudinary.com/dn4ewrrdt/image/upload/v1608711384/caps/ezgif-2-c7d412856d51_o2kbon.jpg"],
-      "quantity": 8,
-      "color": "gray",
-      "productUrl":"/cap",
-      "brand":"thrasher",
-      "parametrs":["The emblem is on the front", "The inner edge is sewn with moisture-absorbing tape."],
-      "description":[ "This company appeared originally as a skateboarding magazine created in San Francisco, it covered various news, reviews, various photos and much more. It appeared in 1981 and was founded by three guys - Kevin Thatcher, Eric Swenson, and Fausto Vitello. The magazine still exists, there is also an Internet version of it."]
-    },
-    {
-      "name": " Casio A700WEG-9AEF Gold Watch",
-      "id": "watch_1",
-      "currentPrice": 2680.00,
-      "categories": "watch",
-      "imageUrls":["https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/7/a700weg-9aef.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/7/a700weg-9aef_1_.jpg"],
-      "quantity": 50,
-      "color": "gold",
-      "productUrl":"/watch",
-      "brand":" Casio",
-      "parametrs":[" The watch is made of a plastic case and a steel bracelet, and a polymer glass protects the LCD dial. "],
-      "description":[ " The origin of the Japanese company Casio goes back to the deep forties of the last century .. Its founder was a humble boy Tadao Kasio. Since childhood, Tadao has shown incredible abilities and an extraordinary thirst for knowledge. The young man's talents were noticed by the managers of the plant where he worked in order to financially help the family. The company paid for the guy's higher education, which later allowed him to open his own business with his brothers. "]
-    },{
-      "name": " NIXON Watch Re-Run All Black / Green ",
-      "id": "watch_2",
-      "currentPrice": 4199.00,
-      "categories": "watch",
-      "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/9/a944-032-view1.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/9/a944-032-view5.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/9/a944-032-view2.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/a/9/a944-032-view3.jpg  "],
-      "quantity": 50,
-      "color": " black / green ",
-      "productUrl":"/watch",
-      "brand":" NIXON ",
-      "parametrs":[" This watch is endowed with all the functions necessary in everyday life: calendar, alarm clock, timer, and of course, hours, minutes and seconds. Re-Run was created for those who do not need all these fancy bells and whistles - the watch should show the time, and Nixon knows how to create such mechanisms that will show you extremely accurate time. "],
-      "description":[ " In general, let's face it, Nixon's Re-Run is an ordinary watch, but made to last, and it looks incredibly cool. "]
-    },{
-      "name": " Nixon Time Teller All Rose Gold Watch ",
-      "id": "watch_3",
-      "currentPrice": 3465.00,
-      "categories": "watch",
-      "imageUrls":[" https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/n/_nixon_time_teller_all_rose_gold.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/n/_nixon_time_teller_all_rose_gold_3.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/n/_nixon_time_teller_all_rose_gold_2.jpg, https://shift.ua/media/catalog/product/cache/a4fd160a41c1aac54854572167f2aa40/_/n/_nixon_time_teller_all_rose_gold_4.jpg  "],
-      "quantity": 50,
-      "color": "rose gold",
-      "productUrl":"/watch",
-      "brand":" Nixon ",
-      "parametrs":[" The elder brother of the popular Time Teller made of polyurethane in bright colors, as it should be, is stylish, solid, strict and restrained in colors. ", " For those who love hard materials.. "],
-      "description":[ " Mechanism: Japanese quartz movement Miyota Functions: hours, minutes, seconds Accuracy 1/20 second. Housing: Width 39.25 mm One-piece case with screw-on cover and crown Stainless steel Water resistance 100 m (10 ATM) Reinforced mineral glass Triple seal crown."]
-    },{
+ {
       "name": " Casio G-Shock GA-2100-4AER Red Watch",
       "id": "watch_4",
       "currentPrice": 4590.00,

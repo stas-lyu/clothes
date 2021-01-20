@@ -2,7 +2,7 @@
 if($_POST)
 {
     $to_Email = "stas-lyu@outlook.com";
-    $subject = 'Запрос обратного звонка '.$_POST["polz_name"];
+    $subject = 'Запрос обратного звонка '.$_POST["user_name"];
 
     if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
 

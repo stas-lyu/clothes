@@ -14,7 +14,7 @@ if($_POST)
         die($otvet_serv);
     }
 
-    if(!isset($_POST["polz_name"]) || !isset($_POST["polz_tel"]))
+    if(!isset($_POST["user_name"]) || !isset($_POST["user_tel"]))
     {
         $otvet_serv = json_encode(array('type'=>'error', 'text' => 'Заполните форму'));
         die($otvet_serv);

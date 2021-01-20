@@ -1,7 +1,7 @@
 let categoryNews = document.querySelector('#newItems .multiple-items');
 
 axios
-    .get("https://my-json-server.typicode.com/stas-lyu/clothes/products")
+    .get("/products")
     .then(data => {
         return data.data
     })

@@ -52,7 +52,7 @@
             <div class="customer_name">
                 <label>
                     <p>Имя</p>
-                    <input type="text" name="fio" class="name">
+                    <input type="text" name="fio" class="name" required>
                 </label>
                 <label>
                     <p>E-mail</p>
@@ -60,7 +60,7 @@
                 </label>
                 <label>
                     <p>Телефон</p>
-                    <input type="number" name="tel" class="phoneNumber">
+                    <input type="number" name="tel" class="phoneNumber" required>
                 </label>
             </div>
             <div class="btn_cansel_order">

@@ -215,21 +215,19 @@ export function changeArrow() {
 }
 
 export function item_modal_window(data) {
-    let slider_item = [...document.querySelectorAll('.slick-slide')];
+    let slider_item = document.querySelectorAll('.slider-item');
     let product_modal_window = document.getElementById("product_modal_window");
     let span_close = document.getElementsByClassName("close_modal_window_product")[0];
     let modal_content = document.querySelector('.modal_content_product');
 
-    for (let key of slider_item) {
+    for (let key in slider_item) {
+       
 
         slider_item[key].id = data[key].id;
-
-        console.log("data key is " + data[key].id);
 
         slider_item[key].onclick = function (event) {
 
             if (event.target.className !== 'btn_by') {
-
                 let divProduct = document.createElement('div');
                 divProduct.className = 'divProduct';
                 let divPhoto = document.createElement('div');
@@ -256,6 +254,9 @@ export function item_modal_window(data) {
                 let productColor = document.createElement('p');
                 productColor.innerHTML = `<b>Color:</b> ${data[key].color}`;
                 divContent.append(productColor);
+                let description = document.createElement('p');
+                description.innerHTML = `<b>Description:</b> ${data[key].description}`;
+                divContent.append(description)
                 let costPrice = document.createElement('p');
                 costPrice.className = 'costPrice';
                 costPrice.innerHTML = `CurrentPrice: <span class="spanText">${data[key].currentPrice * 1.2}</span> <b>${data[key].currentPrice}</b>`

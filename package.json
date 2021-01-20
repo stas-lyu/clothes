@@ -23,5 +23,5 @@
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "https://f02.herokuapp.com"
 }

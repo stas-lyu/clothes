@@ -55,10 +55,10 @@ axios
 
     .then((data) => {
         item_modal_window(data);
-        item_Prodocuts_Modal_Window();
-
     })
-
+    .then(()=>{
+        item_Prodocuts_Modal_Window();
+    })
     .catch(err => {
         console.log(err)
         /*Do something with error, e.g. show error to user*/
@@ -216,6 +216,7 @@ export function item_modal_window(data) {
                 btnOrder.className = 'btnOrder';
                 btnOrder.innerHTML = 'Заказать';
                 divContent.append(btnOrder);
+                btnOrder.addEventListener('click', item_Prodocuts_Modal_Window);
                 product_modal_window.style.display = "block";
             }
             span_close.onclick = function () {
@@ -239,20 +240,17 @@ export function item_modal_window(data) {
 }
 
 
-function item_Prodocuts_Modal_Window(){
+function item_Prodocuts_Modal_Window(data){
     let modal = document.getElementById("my_modal");
     let modalContent = document.querySelector("#my_modal .modal_content");
     let btn = document.querySelector('.btnOrder');
-    console.log(btn)
     let span = document.getElementsByClassName("close_modal_window")[0];
     let close = document.querySelector('#cansel');
 
-    for (let key of btn) {
-        key.onclick = function (e) {
+        btn.onclick = function (e) {
             let div = document.createElement('div');
             div.className = 'card';
             modal.style.display = "block";
-            console.log(e.target.id);
             let newData = data.filter((item) => {
                 return item.id == e.target.id
             });
@@ -265,7 +263,7 @@ function item_Prodocuts_Modal_Window(){
                 modalContent.prepend(div);
             })
         }
-    }
+    
     let deleteCard = function () {
         let card = document.querySelector(".card");
         card.remove()
@@ -287,3 +285,4 @@ function item_Prodocuts_Modal_Window(){
         }
     };
 }
+

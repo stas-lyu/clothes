@@ -57,9 +57,9 @@ axios
     .then((data) => {
         item_modal_window(data);
     })
-    .then(() => {
-        item_Prodocuts_Modal_Window();
-    })
+    // .then(() => {
+    //     item_Prodocuts_Modal_Window();
+    // })
     .catch(err => {
         console.log(err)
         /*Do something with error, e.g. show error to user*/
@@ -176,119 +176,145 @@ export function changeArrow() {
 }
 
 export function item_modal_window(data) {
-    let slider_item = document.querySelectorAll('.slider-item');
-    let product_modal_window = document.getElementById("product_modal_window");
-    let span_close = document.getElementsByClassName("close_modal_window_product")[0];
-    let modal_content = document.querySelector('.modal_content_product');
-
-
-    for (let key in slider_item) {
-
-
-        slider_item[key].id = data[key].id;
-
-        slider_item[key].onclick = function (event) {
-
-            if (event.target.className !== 'btn_by') {
-                let divProduct = document.createElement('div');
-                divProduct.className = 'divProduct';
-                let divPhoto = document.createElement('div');
-                divPhoto.className = 'divPhoto';
-                let divContent = document.createElement('div');
-                divContent.className = 'divContent';
-                modal_content.append(divProduct);
-                divProduct.append(divPhoto);
-                divProduct.append(divContent);
-                let photoImg = document.createElement('img');
-                photoImg.src = data[key].imageUrls[0].split(',')[0];
-                divPhoto.append(photoImg);
-                let h2 = document.createElement('h2');
-                h2.className = 'heading';
-                h2.innerHTML = data[key].name;
-                divContent.append(h2);
-                let paragBrend = document.createElement('p');
-                paragBrend.className = 'paragBrand';
-                paragBrend.innerHTML = `<b>Brand:</b> <a href="#">${data[key].brand}</a>`;
-                divContent.append(paragBrend);
-                let productColor = document.createElement('p');
-                productColor.innerHTML = `<b>Color:</b> ${data[key].color}`;
-                divContent.append(productColor);
-                let description = document.createElement('p');
-                description.innerHTML = `<b>Description:</b> ${data[key].description}`;
-                divContent.append(description);
-                let costPrice = document.createElement('p');
-                costPrice.className = 'costPrice';
-                costPrice.innerHTML = `CurrentPrice: <span class="spanText">${data[key].currentPrice * 1.2}</span> <b>${data[key].currentPrice}</b>`
-                divContent.append(costPrice);
-                let btnOrder = document.createElement('button');
-                btnOrder.className = 'btnOrder';
-                btnOrder.innerHTML = 'Заказать';
-                divContent.append(btnOrder);
-                btnOrder.addEventListener('click', item_Prodocuts_Modal_Window);
-                product_modal_window.style.display = "block";
-            }
-            span_close.onclick = function () {
-                product_modal_window.style.display = "none";
-                let product = document.querySelector('.divProduct')
-                product.remove()
-            };
-
-            window.onclick = function (event) {
-                if (event.target == product_modal_window) {
-                    product_modal_window.style.display = "none";
-                    let product = document.querySelector('.divProduct')
-                    product.remove()
-                }
-            }
-
-
-        }
-    }
-}
-
-
-function item_Prodocuts_Modal_Window(data) {
-    let modalContent = document.querySelector("#my_modal .modal_content");
-    let btn = document.querySelector('.btnOrder');
+    let modal = document.getElementById("my_modal");
+    let showModal = document.querySelectorAll('.btn_by');
     let span = document.getElementsByClassName("close_modal_window")[0];
     let close = document.querySelector('#cansel');
 
-    btn.onclick = function (e) {
-        let div = document.createElement('div');
-        div.className = 'card';
-        modal.style.display = "block";
-        let newData = data.filter((item) => {
-            return item.id == e.target.id
-        });
 
-        newData.map((item) => {
-            let title = document.createElement(('h4'));
-            title.innerHTML = "";
-            title.innerHTML = item.name;
-            div.append(title);
-            modalContent.prepend(div);
-        })
-    };
-
-    let deleteCard = function () {
-        let card = document.querySelector(".card");
-        card.remove()
-    };
+    for( let key of showModal ){
+        key.onclick = function(){
+            modal.style.display = "block";
+            console.log(showModal[key]);
+        }
+    }
 
     span.onclick = function () {
         modal.style.display = "none";
-        deleteCard()
     };
 
-    close.onclick = function () {
-        deleteCard();
+    close.onclick = function (e) {
         modal.style.display = "none";
     };
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
-            deleteCard();
         }
-    };
+    }
+
+    // let slider_item = document.querySelectorAll('.slider-item');
+    // let product_modal_window = document.getElementById("product_modal_window");
+    // let span_close = document.getElementsByClassName("close_modal_window_product")[0];
+    // let modal_content = document.querySelector('.modal_content_product');
+    //
+    //
+    // for (let key in slider_item) {
+    //
+    //
+    //     slider_item[key].id = data[key].id;
+    //
+    //     slider_item[key].onclick = function (event) {
+    //
+    //         if (event.target.className !== 'btn_by') {
+    //             let divProduct = document.createElement('div');
+    //             divProduct.className = 'divProduct';
+    //             let divPhoto = document.createElement('div');
+    //             divPhoto.className = 'divPhoto';
+    //             let divContent = document.createElement('div');
+    //             divContent.className = 'divContent';
+    //             modal_content.append(divProduct);
+    //             divProduct.append(divPhoto);
+    //             divProduct.append(divContent);
+    //             let photoImg = document.createElement('img');
+    //             photoImg.src = data[key].imageUrls[0].split(',')[0];
+    //             divPhoto.append(photoImg);
+    //             let h2 = document.createElement('h2');
+    //             h2.className = 'heading';
+    //             h2.innerHTML = data[key].name;
+    //             divContent.append(h2);
+    //             let paragBrend = document.createElement('p');
+    //             paragBrend.className = 'paragBrand';
+    //             paragBrend.innerHTML = `<b>Brand:</b> <a href="#">${data[key].brand}</a>`;
+    //             divContent.append(paragBrend);
+    //             let productColor = document.createElement('p');
+    //             productColor.innerHTML = `<b>Color:</b> ${data[key].color}`;
+    //             divContent.append(productColor);
+    //             let description = document.createElement('p');
+    //             description.innerHTML = `<b>Description:</b> ${data[key].description}`;
+    //             divContent.append(description);
+    //             let costPrice = document.createElement('p');
+    //             costPrice.className = 'costPrice';
+    //             costPrice.innerHTML = `CurrentPrice: <span class="spanText">${data[key].currentPrice * 1.2}</span> <b>${data[key].currentPrice}</b>`
+    //             divContent.append(costPrice);
+    //             let btnOrder = document.createElement('button');
+    //             btnOrder.className = 'btnOrder';
+    //             btnOrder.innerHTML = 'Заказать';
+    //             divContent.append(btnOrder);
+    //             btnOrder.addEventListener('click', item_Prodocuts_Modal_Window);
+    //             product_modal_window.style.display = "block";
+    //         }
+    //         span_close.onclick = function () {
+    //             product_modal_window.style.display = "none";
+    //             let product = document.querySelector('.divProduct')
+    //             product.remove()
+    //         };
+    //
+    //         window.onclick = function (event) {
+    //             if (event.target == product_modal_window) {
+    //                 product_modal_window.style.display = "none";
+    //                 let product = document.querySelector('.divProduct')
+    //                 product.remove()
+    //             }
+    //         }
+    //
+    //
+    //     }
+    // }
 }
+
+
+// function item_Prodocuts_Modal_Window(data) {
+//     let modalContent = document.querySelector("#my_modal .modal_content");
+//     let btn = document.querySelector('.btnOrder');
+//     let span = document.getElementsByClassName("close_modal_window")[0];
+//     let close = document.querySelector('#cansel');
+//
+//     btn.onclick = function (e) {
+//         let div = document.createElement('div');
+//         div.className = 'card';
+//         modal.style.display = "block";
+//         let newData = data.filter((item) => {
+//             return item.id == e.target.id
+//         });
+//
+//         newData.map((item) => {
+//             let title = document.createElement(('h4'));
+//             title.innerHTML = "";
+//             title.innerHTML = item.name;
+//             div.append(title);
+//             modalContent.prepend(div);
+//         })
+//     };
+//
+//     let deleteCard = function () {
+//         let card = document.querySelector(".card");
+//         card.remove()
+//     };
+//
+//     span.onclick = function () {
+//         modal.style.display = "none";
+//         deleteCard()
+//     };
+//
+//     close.onclick = function () {
+//         deleteCard();
+//         modal.style.display = "none";
+//     };
+//     window.onclick = function (event) {
+//         if (event.target == modal) {
+//             modal.style.display = "none";
+//             deleteCard();
+//         }
+//     };
+// }
 

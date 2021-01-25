@@ -1,4 +1,5 @@
 let categoryNews = document.querySelector('#newItems .multiple-items');
+let modal = document.getElementById("my_modal");
 
 axios
     .get("/products")
@@ -51,12 +52,12 @@ axios
 
         return data;
     })
-    
+
 
     .then((data) => {
         item_modal_window(data);
     })
-    .then(()=>{
+    .then(() => {
         item_Prodocuts_Modal_Window();
     })
     .catch(err => {
@@ -98,6 +99,9 @@ export function createNewCard(item) {
     div.append(priceBlock);
     footerItem.className = 'footerItem';
     btnBuy.className = 'btn_by';
+    btnBuy.addEventListener('click', (e) => {
+        modal.style.display = 'block';
+    });
     btnBuy.innerHTML = "<span class=\"bucketIcon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20px\" height=\"17px\"><path fill-rule=\"evenodd\" fill=\"rgb(255, 255, 255)\" d=\"M19.408,6.459 L17.412,12.358 C17.412,12.358 17.249,13.234 16.405,13.234 L6.334,13.234 C5.330,13.234 5.287,12.134 5.287,12.134 L4.025,2.705 L0.783,1.883 C0.295,1.759 0.000,1.264 0.124,0.779 C0.249,0.293 0.745,-0.000 1.233,0.124 L5.077,1.100 C5.440,1.192 5.709,1.495 5.756,1.865 L6.333,6.537 L6.938,11.333 L16.049,11.333 L16.523,9.744 L8.885,9.741 C8.468,9.741 8.130,9.405 8.130,8.990 C8.130,8.575 8.468,8.239 8.885,8.239 L16.970,8.237 L17.475,6.538 L9.522,6.539 C9.073,6.539 8.709,6.176 8.709,5.728 C8.709,5.281 9.073,4.919 9.522,4.919 L18.511,4.920 C20.000,4.920 19.408,6.458 19.408,6.459 ZM7.353,13.771 C8.249,13.771 8.976,14.494 8.976,15.385 C8.976,16.277 8.249,17.000 7.353,17.000 C6.457,17.000 5.730,16.277 5.730,15.385 C5.730,14.494 6.457,13.771 7.353,13.771 ZM14.435,13.771 C15.330,13.771 16.057,14.494 16.057,15.385 C16.057,16.277 15.330,17.000 14.435,17.000 C13.538,17.000 12.812,16.277 12.812,15.385 C12.812,14.494 13.538,13.771 14.435,13.771 Z\"/></svg></span> Купить";
     footerItem.prepend(btnBuy);
     readMore.className = 'detail';
@@ -179,7 +183,7 @@ export function item_modal_window(data) {
 
 
     for (let key in slider_item) {
-       
+
 
         slider_item[key].id = data[key].id;
 
@@ -211,7 +215,7 @@ export function item_modal_window(data) {
                 divContent.append(productColor);
                 let description = document.createElement('p');
                 description.innerHTML = `<b>Description:</b> ${data[key].description}`;
-                divContent.append(description)
+                divContent.append(description);
                 let costPrice = document.createElement('p');
                 costPrice.className = 'costPrice';
                 costPrice.innerHTML = `CurrentPrice: <span class="spanText">${data[key].currentPrice * 1.2}</span> <b>${data[key].currentPrice}</b>`
@@ -240,34 +244,32 @@ export function item_modal_window(data) {
 
         }
     }
-
 }
 
 
-function item_Prodocuts_Modal_Window(data){
-    let modal = document.getElementById("my_modal");
+function item_Prodocuts_Modal_Window(data) {
     let modalContent = document.querySelector("#my_modal .modal_content");
     let btn = document.querySelector('.btnOrder');
     let span = document.getElementsByClassName("close_modal_window")[0];
     let close = document.querySelector('#cansel');
 
-        btn.onclick = function (e) {
-            let div = document.createElement('div');
-            div.className = 'card';
-            modal.style.display = "block";
-            let newData = data.filter((item) => {
-                return item.id == e.target.id
-            });
+    btn.onclick = function (e) {
+        let div = document.createElement('div');
+        div.className = 'card';
+        modal.style.display = "block";
+        let newData = data.filter((item) => {
+            return item.id == e.target.id
+        });
 
-            newData.map((item) => {
-                let title = document.createElement(('h4'));
-                title.innerHTML = "";
-                title.innerHTML = item.name;
-                div.append(title);
-                modalContent.prepend(div);
-            })
-        }
-    
+        newData.map((item) => {
+            let title = document.createElement(('h4'));
+            title.innerHTML = "";
+            title.innerHTML = item.name;
+            div.append(title);
+            modalContent.prepend(div);
+        })
+    };
+
     let deleteCard = function () {
         let card = document.querySelector(".card");
         card.remove()

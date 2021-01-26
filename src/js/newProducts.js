@@ -1,6 +1,42 @@
 let categoryNews = document.querySelector('#newItems .multiple-items');
 let modal = document.getElementById("my_modal");
 
+let span_close = document.getElementsByClassName("close_modal_window")[0];
+let orderBtnOrderForm = document.getElementById('order');
+let cancelBtnOrderForm = document.getElementById('cansel');
+
+let productDetailsModal = document.querySelector('#product_modal_window');
+
+let spanCloseProductDetailsModal = document.querySelector('.close_modal_window_product');
+
+span_close.onclick = function () {
+    modal.style.display = "none";
+}
+
+orderBtnOrderForm.onclick = function (e) {
+    e.preventDefault();
+}
+
+cancelBtnOrderForm.onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+spanCloseProductDetailsModal.onclick = function () {
+    productDetailsModal.style.display = "none";
+}
+window.onclick = function (event) {
+    if (event.target == productDetailsModal) {
+        productDetailsModal.style.display = "none";
+    }
+}
+
+
 axios
     .get("/products")
     .then(data => {
@@ -16,14 +52,13 @@ axios
             let card = createNewCard(item);
             categoryNews.append(card);
         }));
+        createProductDetailsModal();
         return data;
     })
     .then((data) => {
-
         $(document).ready(function () {
 
             initSlick($('#newItems .multiple-items'));
-
 
             let products = document.querySelector("#products .allNewProducts");
             let recommend = document.querySelector('#recommend .allNewProducts');
@@ -52,13 +87,11 @@ axios
 
         return data;
     })
-
-
-    .then((data) => {
-        item_modal_window(data);
-    })
+    // .then((data) => {
+    //     // item_modal_window(data);
+    // })
     // .then(() => {
-    //     item_Prodocuts_Modal_Window();
+    //     // item_Prodocuts_Modal_Window(data);
     // })
     .catch(err => {
         console.log(err)
@@ -69,6 +102,9 @@ axios
 export function createNewCard(item) {
     let div = document.createElement('div');
     let img = document.createElement('img');
+    img.addEventListener('click', () => {
+        showProductDetails(item);
+    });
     let des = document.createElement('div');
     let title = document.createElement('h3');
     let imgWrapper = document.createElement('div');
@@ -82,11 +118,13 @@ export function createNewCard(item) {
     div.className = 'slider-item';
     imgWrapper.className = 'img_wrapper';
     imgWrapper.append(img);
+
     img.src = item.imageUrls[0].split(',')[0];
     div.append(imgWrapper);
     des.className = 'description';
     div.append(des);
     title.innerHTML = item.name;
+
     des.append(title);
     priceBlock.className = 'priceBlock';
     price.className = 'price';
@@ -99,16 +137,20 @@ export function createNewCard(item) {
     div.append(priceBlock);
     footerItem.className = 'footerItem';
     btnBuy.className = 'btn_by';
-    btnBuy.addEventListener('click', (e) => {
-        modal.style.display = 'block';
+    btnBuy.addEventListener('click', () => {
+        showOrderForm();
     });
     btnBuy.innerHTML = "<span class=\"bucketIcon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20px\" height=\"17px\"><path fill-rule=\"evenodd\" fill=\"rgb(255, 255, 255)\" d=\"M19.408,6.459 L17.412,12.358 C17.412,12.358 17.249,13.234 16.405,13.234 L6.334,13.234 C5.330,13.234 5.287,12.134 5.287,12.134 L4.025,2.705 L0.783,1.883 C0.295,1.759 0.000,1.264 0.124,0.779 C0.249,0.293 0.745,-0.000 1.233,0.124 L5.077,1.100 C5.440,1.192 5.709,1.495 5.756,1.865 L6.333,6.537 L6.938,11.333 L16.049,11.333 L16.523,9.744 L8.885,9.741 C8.468,9.741 8.130,9.405 8.130,8.990 C8.130,8.575 8.468,8.239 8.885,8.239 L16.970,8.237 L17.475,6.538 L9.522,6.539 C9.073,6.539 8.709,6.176 8.709,5.728 C8.709,5.281 9.073,4.919 9.522,4.919 L18.511,4.920 C20.000,4.920 19.408,6.458 19.408,6.459 ZM7.353,13.771 C8.249,13.771 8.976,14.494 8.976,15.385 C8.976,16.277 8.249,17.000 7.353,17.000 C6.457,17.000 5.730,16.277 5.730,15.385 C5.730,14.494 6.457,13.771 7.353,13.771 ZM14.435,13.771 C15.330,13.771 16.057,14.494 16.057,15.385 C16.057,16.277 15.330,17.000 14.435,17.000 C13.538,17.000 12.812,16.277 12.812,15.385 C12.812,14.494 13.538,13.771 14.435,13.771 Z\"/></svg></span> Купить";
     footerItem.prepend(btnBuy);
     readMore.className = 'detail';
-    readMore.innerText = 'Подробнее'
+    readMore.addEventListener('click', () => {
+        showProductDetails(item);
+    });
+    readMore.innerText = 'Подробнее';
     footerItem.append(readMore);
     div.append(footerItem);
     btnBuy.id = item.id;
+
     return div;
 }
 
@@ -123,12 +165,12 @@ export function initSlick(id) {
         prevArrow: `<div class="slick-custom-arrow slick-custom-arrow-right">
         </div>`,
         responsive: [{
-            breakpoint: 979,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        },
+                breakpoint: 979,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
             {
                 breakpoint: 749,
                 settings: {
@@ -175,146 +217,65 @@ export function changeArrow() {
     }
 }
 
-export function item_modal_window(data) {
-    let modal = document.getElementById("my_modal");
-    let showModal = document.querySelectorAll('.btn_by');
-    let span = document.getElementsByClassName("close_modal_window")[0];
-    let close = document.querySelector('#cansel');
+export function showOrderForm() {
+    modal.style.display = "block";
+}
 
+function showProductDetails(item) {
+    document.querySelector('.heading').innerHTML = item.name;
+    document.querySelector('.photoImg').src = item.imageUrls[0].split(',')[0];
+    document.querySelector('.paragBrand').innerHTML = `<b>Brand:</b> <a href="#">${item.brand}</a>`;
+    document.querySelector('.productColor').innerHTML = `<b>Color:</b> ${item.color}`;
+    document.querySelector('.descriptionProduct').innerHTML = `<b>Description:</b> ${item.description}`;
+    document.querySelector('.costPrice').innerHTML = `CurrentPrice: <span class="spanText">${item.currentPrice * 1.2}</span> <b>${item.currentPrice}</b>`
 
-    for( let key of showModal ){
-        key.onclick = function(){
-            modal.style.display = "block";
-            console.log(showModal[key]);
-        }
-    }
+    productDetailsModal.style.display = 'block';
+}
 
-    span.onclick = function () {
-        modal.style.display = "none";
-    };
-
-    close.onclick = function (e) {
-        modal.style.display = "none";
-    };
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-    let slider_item = document.querySelectorAll('.slider-item');
-    let product_modal_window = document.getElementById("product_modal_window");
-    let span_close = document.getElementsByClassName("close_modal_window_product")[0];
+function createProductDetailsModal() {
     let modal_content = document.querySelector('.modal_content_product');
-    
-    
-    for (let key in slider_item) {
-    
-    
-        slider_item[key].id = data[key].id;
-    
-        slider_item[key].onclick = function (event) {
-    
-            if (event.target.className !== 'btn_by') {
-                let divProduct = document.createElement('div');
-                divProduct.className = 'divProduct';
-                let divPhoto = document.createElement('div');
-                divPhoto.className = 'divPhoto';
-                let divContent = document.createElement('div');
-                divContent.className = 'divContent';
-                modal_content.append(divProduct);
-                divProduct.append(divPhoto);
-                divProduct.append(divContent);
-                let photoImg = document.createElement('img');
-                photoImg.src = data[key].imageUrls[0].split(',')[0];
-                divPhoto.append(photoImg);
-                let h2 = document.createElement('h2');
-                h2.className = 'heading';
-                h2.innerHTML = data[key].name;
-                divContent.append(h2);
-                let paragBrend = document.createElement('p');
-                paragBrend.className = 'paragBrand';
-                paragBrend.innerHTML = `<b>Brand:</b> <a href="#">${data[key].brand}</a>`;
-                divContent.append(paragBrend);
-                let productColor = document.createElement('p');
-                productColor.innerHTML = `<b>Color:</b> ${data[key].color}`;
-                divContent.append(productColor);
-                let description = document.createElement('p');
-                description.innerHTML = `<b>Description:</b> ${data[key].description}`;
-                divContent.append(description);
-                let costPrice = document.createElement('p');
-                costPrice.className = 'costPrice';
-                costPrice.innerHTML = `CurrentPrice: <span class="spanText">${data[key].currentPrice * 1.2}</span> <b>${data[key].currentPrice}</b>`
-                divContent.append(costPrice);
-                let btnOrder = document.createElement('button');
-                btnOrder.className = 'btnOrder';
-                btnOrder.innerHTML = 'Заказать';
-                divContent.append(btnOrder);
-                btnOrder.addEventListener('click', item_Prodocuts_Modal_Window);
-                product_modal_window.style.display = "block";
-            }
-            span_close.onclick = function () {
-                product_modal_window.style.display = "none";
-                let product = document.querySelector('.divProduct')
-                product.remove()
-            };
-    
-            window.onclick = function (event) {
-                if (event.target == product_modal_window) {
-                    product_modal_window.style.display = "none";
-                    let product = document.querySelector('.divProduct')
-                    product.remove()
-                }
-            }
-    
-    
-        }
-    }
+
+    let divProduct = document.createElement('div');
+    divProduct.className = 'divProduct';
+    let divPhoto = document.createElement('div');
+    divPhoto.className = 'divPhoto';
+
+    let divContent = document.createElement('div');
+    divContent.className = 'divContent';
+    modal_content.append(divProduct);
+    divProduct.append(divPhoto);
+    divProduct.append(divContent);
+    let photoImg = document.createElement('img');
+    photoImg.className = 'photoImg';
+
+    divPhoto.append(photoImg);
+    let h2 = document.createElement('h2');
+    h2.className = 'heading';
+
+    divContent.append(h2);
+    let paragBrend = document.createElement('p');
+    paragBrend.className = 'paragBrand';
+
+    divContent.append(paragBrend);
+    let productColor = document.createElement('p');
+    productColor.className = 'productColor';
+
+    divContent.append(productColor);
+    let description = document.createElement('p');
+    description.className = 'descriptionProduct';
+
+    divContent.append(description);
+    let costPrice = document.createElement('p');
+    costPrice.className = 'costPrice';
+
+    divContent.append(costPrice);
+
+    let btnOrder = document.createElement('button');
+    btnOrder.className = 'btnOrder';
+    btnOrder.addEventListener('click', () => {
+        document.querySelector('#product_modal_window').style.display = 'none';
+        showOrderForm();
+    });
+    btnOrder.innerHTML = 'Заказать';
+    divContent.append(btnOrder);
 }
-
-
-function item_Prodocuts_Modal_Window(data) {
-    let modalContent = document.querySelector("#my_modal .modal_content");
-    let btn = document.querySelector('.btnOrder');
-    let span = document.getElementsByClassName("close_modal_window")[0];
-    let close = document.querySelector('#cansel');
-
-    btn.onclick = function (e) {
-        let div = document.createElement('div');
-        div.className = 'card';
-        modal.style.display = "block";
-        let newData = data.filter((item) => {
-            return item.id == e.target.id
-        });
-
-        newData.map((item) => {
-            let title = document.createElement(('h4'));
-            title.innerHTML = "";
-            title.innerHTML = item.name;
-            div.append(title);
-            modalContent.prepend(div);
-        })
-    };
-
-    let deleteCard = function () {
-        let card = document.querySelector(".card");
-        card.remove()
-    };
-
-    span.onclick = function () {
-        modal.style.display = "none";
-        deleteCard()
-    };
-
-    close.onclick = function () {
-        deleteCard();
-        modal.style.display = "none";
-    };
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            deleteCard();
-        }
-    };
-}
-

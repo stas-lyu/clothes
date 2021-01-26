@@ -25,16 +25,16 @@ window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
-
-spanCloseProductDetailsModal.onclick = function () {
-    productDetailsModal.style.display = "none";
-}
-window.onclick = function (event) {
     if (event.target == productDetailsModal) {
         productDetailsModal.style.display = "none";
     }
 }
+
+
+spanCloseProductDetailsModal.onclick = function () {
+    productDetailsModal.style.display = "none";
+}
+
 
 
 axios

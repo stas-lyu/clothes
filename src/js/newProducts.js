@@ -274,7 +274,7 @@ function createProductDetailsModal() {
     btnOrder.className = 'btnOrder';
     btnOrder.addEventListener('click', () => {
         document.querySelector('#product_modal_window').style.display = 'none';
-        showOrderForm();
+        // showOrderForm();
     });
     btnOrder.innerHTML = 'Заказать';
     divContent.append(btnOrder);

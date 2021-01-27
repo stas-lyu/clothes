@@ -1,3 +1,15 @@
+// cart : Array
+// Item : Object/Class
+// addItemFromCard : Function
+// removeItemFromCart : Function
+// removeItemFromCartAll : Function
+// clearCart : Function
+// countCart : Function
+// totalCart : Function
+// listCart : Function
+// saveCart : Function
+// loadCart : Function
+
 let shoppingCart = (function () {
 
     let cart = [];
@@ -61,6 +73,18 @@ let shoppingCart = (function () {
                 if (cart[item].count === 0) {
                     cart.splice(item, 1)
                 }
+                break;
+            }
+        }
+        saveCart();
+    };
+
+
+    //Remove all items from cart
+    obj.removeItemFromCartAll = function (name) {
+        for (let item in cart) {
+            if (cart[item].name === name) {
+                cart.splice(item, 1);
                 break;
             }
         }
@@ -133,8 +157,8 @@ function displayCart() {
     let output = "";
 
     output += "<tr>"
-    + "<td>" + cartArray[i].name + "</td>"
-    + "<td>(" + cartArray[i].price + ")</td>";
+        + "<td>" + cartArray[i].name + "</td>"
+        + "<td>(" + cartArray[i].price + ")</td>";
     $('.show-cart').html(output);
     $('.total-cart').html(shoppingCart.totalCart());
     $('.total-count').html(shoppingCart.totalCount());
@@ -142,16 +166,35 @@ function displayCart() {
 
 let showCart = $('.show-cart');
 
-
-showCart.on("click", function (event) {
+//Delete item button
+showCart.on("click", ".delete-item", function (event) {
     let name = $(this).data('name');
     shoppingCart.removeItemFromCartAll(name);
     displayCart();
 });
 
+//-1
 showCart.on("click", ".minus-item",
     function (event) {
         let name = $(this).data('name');
         shoppingCart.removeItemFromCart(name);
+        displayCart();
     });
 
+//+1
+showCart.on("click", ".plus-item",
+    function (event) {
+        let name = $(this).data('name');
+        shoppingCart.addItemToCart(name);
+        displayCart();
+    });
+
+//Item count input
+$('.show-cart').on("change", ".item-count", function (event) {
+    let name = $(this).data('name');
+    let count = Number($(this).val());
+    shoppingCart.setCountForItem(name, count);
+    displayCart();
+});
+
+displayCart();

@@ -1,5 +1,5 @@
 let categoryNews = document.querySelector('#newItems .multiple-items');
-let modal = document.getElementById("my_modal");
+let modal = document.getElementById("cart");
 
 let span_close = document.getElementsByClassName("close_modal_window")[0];
 let orderBtnOrderForm = document.getElementById('order');

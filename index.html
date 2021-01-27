@@ -49,7 +49,7 @@
         </div>
     </div>
     <div class="four"><a href="" class="exit">Войти </a><a href="">Личний кабинет</a>
-        <p><img src="src/img/shop.png" alt="" class="shop"> корзина <br> 0/0</p>
+        <button type="button" data-toggle="modal" data-target="#cart"><img src="src/img/shop.png" alt="" class="shop"> корзина <br> 0/0</button>
 
 
         <p><img src="src/img/heart.png" alt=""> Избранное: <span>0</span><img src="src/img/search.png" alt="">
@@ -74,7 +74,28 @@
     </section>
 </div>
 
-<div id="my_modal" class="modal">
+<div id="cart" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div>Общая сумма: $<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Оформить заказ</button>
+                </div>
+            </div>
+
+
     <form class="modal_content" method="post" action="send.php">
         <span class="close_modal_window">×</span>
         <div class="customer_name">
@@ -196,28 +217,7 @@
     <!--        </div>-->
 </section>
 
-<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <table class="show-cart table">
 
-                </table>
-                <div>Общая сумма: $<span class="total-cart"></span></div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-primary">Оформить заказ</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="container">
 <footer>

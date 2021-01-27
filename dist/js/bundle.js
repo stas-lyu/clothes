@@ -114,7 +114,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
   \************************/
 /***/ (() => {
 
-eval("class Cart {\n    \n}\n\n//# sourceURL=webpack:///./src/js/cart.js?");
+eval("let shoppingCart = (function () {\n\n    let cart = [];\n\n    //Constructor\n\n    function Item(name, price, count) {\n        this.name = name;\n        this.price = price;\n        this.count = count\n    }\n\n    //Save cart\n\n    function saveCart() {\n        sessionStorage.setItem('shoppingCart', JSON.stringify(cart))\n    }\n\n    //Load cart\n\n    function loadCart() {\n        cart = JSON.parse(sessionStorage.getItem('shoppingCart'));\n    }\n\n    if (sessionStorage.getItem('shoppingCart') != null) {\n        loadCart()\n    }\n    let obj = {};\n\n    //Add to cart\n\n    obj.addItemToCart = function (name, price, count) {\n        for (let item in cart) {\n            if(cart[item].name === name) {\n                cart[item].count ++;\n                saveCart();\n                return\n            }\n        }\n\n        let item = new Item(name, price, count);\n        cart.push(item);\n        saveCart()\n    };\n\n    //Remove item from cart\n    obj.removeItemFromCart = function (name) {\n        for (let item in cart) {\n            if(cart[item].name === name) {\n                cart[item].count --;\n            }\n        }\n    }\n});\n\n//# sourceURL=webpack:///./src/js/cart.js?");
 
 /***/ }),
 

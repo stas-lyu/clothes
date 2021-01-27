@@ -114,3 +114,44 @@ let shoppingCart = (function () {
 
 })();
 
+$('.add-to-cart').click(function (event) {
+    event.preventDefault();
+    let name = $(this).data('name');
+    let price = Number($(this).data('price'));
+    shoppingCart.addItemToCart(name, price, 1);
+    displayCart();
+});
+
+$('.clear-cart').click(function () {
+    shoppingCart.clearCart();
+    displayCart();
+});
+
+function displayCart() {
+    let cartArray = shoppingCart.listCart();
+
+    let output = "";
+
+    output += "<tr>"
+    + "<td>" + cartArray[i].name + "</td>"
+    + "<td>(" + cartArray[i].price + ")</td>";
+    $('.show-cart').html(output);
+    $('.total-cart').html(shoppingCart.totalCart());
+    $('.total-count').html(shoppingCart.totalCount());
+}
+
+let showCart = $('.show-cart');
+
+
+showCart.on("click", function (event) {
+    let name = $(this).data('name');
+    shoppingCart.removeItemFromCartAll(name);
+    displayCart();
+});
+
+showCart.on("click", ".minus-item",
+    function (event) {
+        let name = $(this).data('name');
+        shoppingCart.removeItemFromCart(name);
+    });
+

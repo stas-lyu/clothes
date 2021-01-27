@@ -1,9 +1,9 @@
 let categoryNews = document.querySelector('#newItems .multiple-items');
 let modal = document.getElementById("cart");
-
 let span_close = document.getElementsByClassName("close_modal_window")[0];
 let orderBtnOrderForm = document.getElementById('order');
 let cancelBtnOrderForm = document.getElementById('cansel');
+let addToCart = document.querySelector('#addToCart');
 
 let productDetailsModal = document.querySelector('#product_modal_window');
 
@@ -34,7 +34,6 @@ window.onclick = function (event) {
 spanCloseProductDetailsModal.onclick = function () {
     productDetailsModal.style.display = "none";
 }
-
 
 
 axios
@@ -118,19 +117,20 @@ export function createNewCard(item) {
     div.className = 'slider-item';
     imgWrapper.className = 'img_wrapper';
     imgWrapper.append(img);
-
     img.src = item.imageUrls[0].split(',')[0];
     div.append(imgWrapper);
     des.className = 'description';
     div.append(des);
     title.innerHTML = item.name;
-
+    addToCart.dataset.name = item.name;
+    addToCart.dataset.price = item.currentPrice;
     des.append(title);
     priceBlock.className = 'priceBlock';
     price.className = 'price';
     price.innerHTML = 'Цена:';
     priceBlock.append(price);
     currentPrice.innerHTML = item.currentPrice;
+    currentPrice.dataset.price = item.currentPrice;
     priceBlock.append(currentPrice);
     oldPrice.innerHTML = item.currentPrice * 1.2;
     priceBlock.append(oldPrice);
@@ -165,12 +165,12 @@ export function initSlick(id) {
         prevArrow: `<div class="slick-custom-arrow slick-custom-arrow-right">
         </div>`,
         responsive: [{
-                breakpoint: 979,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
+            breakpoint: 979,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
             {
                 breakpoint: 749,
                 settings: {

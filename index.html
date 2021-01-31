@@ -17,6 +17,7 @@
 </head>
 
 <body>
+<div class="container">
 <header>
     <div class="one">
         <p>Ваш регион: <a href="">Москва</a></p>
@@ -24,39 +25,38 @@
         <p>оборудование и решения для voip</p>
     </div>
     <div class="two">
-        <div class="left"><img src="dist/img/bg-a.png" alt=""><a href="">обратный <br> звонок</a></div>
+        <div class="left"><img src="src/img/bg-a.png" alt=""><a href="">обратный <br> звонок</a></div>
         <div class="right">+7 495 2-55-44-66 <br> (пн-пт с 9 до 18 ч) <br>
-            <p> <img src="dist/img/viber.png" alt="">
-                <img src="dist/img/watts-app.png" alt=""> +7 903 111-11-11
+            <p><img src="src/img/viber.png" alt="">
+                <img src="src/img/watts-app.png" alt=""> +7 903 111-11-11
             </p>
             <a href="">info@homy.ru</a>
         </div>
     </div>
     <div class="three">
-        <div class="top"><img src="dist/img/P.png" alt="">
-            <p> <span>voip решения</span> <br> для экономних людей</p>
+        <div class="top"><img src="src/img/P.png" alt="">
+            <p><span>voip решения</span> <br> для экономних людей</p>
         </div>
-        <p><input type="search" name="search" placeholder="Поиск по сайту">
-            <input type="submit" value="искать">
-        </p>
+        <div id="search">
+            <form id="header_search_form" type="GET">
+                <div class="header_search_input_wrapper">
+                    <input type="search" class="header_search_input" placeholder="Поиск по сайту">
+                </div>
+                <div class="header_search_button_wrapper">
+                    <button type="submit" class="header_search_button">искать</button>
+                </div>
+            </form>
+        </div>
     </div>
     <div class="four"><a href="" class="exit">Войти </a><a href="">Личний кабинет</a>
-        <p> <img src="dist/img/shop.png" alt="" class="shop"> корзина <br> 0/0</p>
+        <button type="button" data-toggle="modal" data-target="#cart"><img src="src/img/shop.png" alt="" class="shop"> корзина <br> 0/0</button>
 
 
-        <p><img src="dist/img/heart.png" alt=""> Избранное: <span>0</span><img src="dist/img/search.png" alt=""> Сравнение: <span>0</span></p>
+        <p><img src="src/img/heart.png" alt=""> Избранное: <span>0</span><img src="src/img/search.png" alt="">
+            Сравнение: <span>0</span></p>
 
     </div>
 </header>
-<div id="search">
-    <form id="header_search_form" type="GET">
-        <div class="header_search_input_wrapper">
-            <input type="search" class="header_search_input" placeholder="Поиск по сайту">
-        </div>
-        <div class="header_search_button_wrapper">
-            <button type="submit" class="header_search_button">искать</button>
-        </div>
-    </form>
 </div>
 <div id="search_result">
     <section class="search_result_items">
@@ -74,12 +74,30 @@
     </section>
 </div>
 
-<div id="my_modal" class="modal">
+<div id="cart" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div>Общая сумма: $<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    <button type="button" id="addToCart" class="btn btn-primary">Оформить заказ</button>
+                </div>
+            </div>
+
+
     <form class="modal_content" method="post" action="send.php">
         <span class="close_modal_window">×</span>
-        <div class="order">
-            <p>Заказать</p>
-        </div>
         <div class="customer_name">
             <label>
                 <p>Имя</p>
@@ -95,9 +113,9 @@
             </label>
         </div>
         <div class="btn_cansel_order">
-            <button id="cansel">Отмена</button>
-            <input type="submit" id="order">Заказать
+            <input type="submit" id="order" placeholder="">
         </div>
+        <button type="button" id="cansel">Отмена</button>
     </form>
 </div>
 
@@ -199,35 +217,45 @@
     <!--        </div>-->
 </section>
 
+
+
+<div class="container">
 <footer>
-    <div class="top">
+    <div class="top_footer">
         <div class="one_footer">
-            <img src="dist/img/logo copy.png" alt="">
+            <img src="src/img/logo copy.png" alt=""> <br>
             <p>© ХомиРу, 2006-2016 Оборудование и решения для VoIP
 
-            </p>
+            </p> <br>
             <p>Перепечатка материалов возможна только с активной ссылкой на homy.ru</p>
         </div>
         <div class="two_footer">
-            г. Москва, Зеленоград, Панфиловский пр., дом 8, строение 1 Схема проезда
+            г. Москва, Зеленоград, Панфиловский пр., дом 8, строение 1 <br> <a href="">Схема проезда</a>
         </div>
         <div class="three_footer">
-
+            <ul>
+                <li>Доставка и оплата</li>
+                <li>Гарантии и возврат</li>
+                <li>Техподдержка</li>
+                <li> Контакты</li>
+            </ul>
+            <div class="left"><img src="src/img/bg-a.png" alt=""><a href="">обратный <br> звонок</a></div>
         </div>
         <div class="four_footer">
-            <div class="left"><img src="dist/img/bg-a.png" alt=""><a href="">обратный <br> звонок</a></div>
-            <div class="right">+7 495 2-55-44-66 <br> (пн-пт с 9 до 18 ч) <br>
-                <p> <img src="dist/img/viber.png" alt="">
-                    <img src="dist/img/watts-app.png" alt=""> +7 903 111-11-11
-                </p>
-                <a href="">info@homy.ru</a>
-            </div>
+
+            <span>+7 495 2-55-44-66 </span> <br> (пн-пт с 9 до 18 ч) <br>
+            <p><img src="src/img/viber.png" alt="">
+                <img src="src/img/watts-app.png" alt=""> +7 903 111-11-11
+            </p>
+            <a href="">info@homy.ru</a>
+            <img src="src/img/vk.png" alt="" class="vk">
         </div>
     </div>
     <div class="bottom">
         <p></p>
     </div>
 </footer>
+</div>
 <script src="dist/js/slick.min.js"></script>
 <script type="text/javascript" src="dist/js/bundle.js"></script>
 </body>

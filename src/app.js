@@ -1,4 +1,5 @@
 import './scss/header.scss'
+import './js/all.js';
 import './js/modalWindow.js'
 import './js/pavlutska.js'
 import "./scss/search.scss";

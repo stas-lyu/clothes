@@ -63,25 +63,25 @@ axios
             let recommend = document.querySelector('#recommend .allNewProducts');
             let sale = document.querySelector('#sale .allNewProducts');
 
-            //             function changeLink(link, value) {
-            //                 let windowWidth = document.documentElement.clientWidth;
-            //
-            //                 if (windowWidth <= 1199) {
-            //                     link.innerHTML = `<svg
-            //  xmlns="http://www.w3.org/2000/svg"
-            //  width="9px" height="24px">
-            // <image  x="0px" y="0px" width="9px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAYCAMAAAAfxSccAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgVBMVEVGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6v////dyEg5AAAAKXRSTlMAPK9BxMIGYWYK1uQabJcT4vk7gcAd7WSR4xgn9Z85NLa3F8EH5WfDQjL7mrQAAAABYktHRCpTvtSeAAAAB3RJTUUH5QEHETcgnGd4IwAAAHNJREFUCNdVj1kSglAQA1lEUXEBNwQV2e37X9AnAaw3X12ZykziuJ7vaBYES9EKQtF6wzYS7mAvOhyJE+EJzjJdrnCTmMI9Gyh/QCrxCfFroMKI75lKe/t3/K5U9mXzrW7sBHMqk7SNpvTd1KgfG7neR/AFKBcLgi3YMvMAAAAASUVORK5CYII=" />
-            // </svg>`
-            //                 } else {
-            //                     link.innerHTML = value
-            //                 }
-            //             }
+                        function changeLink(link, value) {
+                            let windowWidth = document.documentElement.clientWidth;
+
+                            if (windowWidth <= 1199) {
+                                link.innerHTML = `<svg
+             xmlns="http://www.w3.org/2000/svg"
+             width="9px" height="24px">
+            <image  x="0px" y="0px" width="9px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAYCAMAAAAfxSccAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgVBMVEVGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6v////dyEg5AAAAKXRSTlMAPK9BxMIGYWYK1uQabJcT4vk7gcAd7WSR4xgn9Z85NLa3F8EH5WfDQjL7mrQAAAABYktHRCpTvtSeAAAAB3RJTUUH5QEHETcgnGd4IwAAAHNJREFUCNdVj1kSglAQA1lEUXEBNwQV2e37X9AnAaw3X12ZykziuJ7vaBYES9EKQtF6wzYS7mAvOhyJE+EJzjJdrnCTmMI9Gyh/QCrxCfFroMKI75lKe/t3/K5U9mXzrW7sBHMqk7SNpvTd1KgfG7neR/AFKBcLgi3YMvMAAAAASUVORK5CYII=" />
+            </svg>`
+                            } else {
+                                link.innerHTML = value
+                            }
+                        }
 
             changeArrow();
-            // changeLink(products, `Все новинки`);
-            // changeLink(recommend, `Все рекомендации`);
-            // changeLink(sale, `Все товары`);
-            // $(window).on('resize', () => changeArrow(), changeLink(products, `Все новинки`), changeLink(recommend, `Все рекомендации`), changeLink(sale, `Все товары`));
+            changeLink(products, `Все новинки`);
+            changeLink(recommend, `Все рекомендации`);
+            changeLink(sale, `Все товары`);
+            $(window).on('resize', () => changeArrow(), changeLink(products, `Все новинки`), changeLink(recommend, `Все рекомендации`), changeLink(sale, `Все товары`));
         });
 
         return data;
@@ -138,7 +138,7 @@ export function createNewCard(item) {
     footerItem.className = 'footerItem';
     btnBuy.className = 'btn_by';
     btnBuy.addEventListener('click', () => {
-        showOrderForm();
+        showOrderForm(item);
     });
     btnBuy.innerHTML = "<span class=\"bucketIcon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20px\" height=\"17px\"><path fill-rule=\"evenodd\" fill=\"rgb(255, 255, 255)\" d=\"M19.408,6.459 L17.412,12.358 C17.412,12.358 17.249,13.234 16.405,13.234 L6.334,13.234 C5.330,13.234 5.287,12.134 5.287,12.134 L4.025,2.705 L0.783,1.883 C0.295,1.759 0.000,1.264 0.124,0.779 C0.249,0.293 0.745,-0.000 1.233,0.124 L5.077,1.100 C5.440,1.192 5.709,1.495 5.756,1.865 L6.333,6.537 L6.938,11.333 L16.049,11.333 L16.523,9.744 L8.885,9.741 C8.468,9.741 8.130,9.405 8.130,8.990 C8.130,8.575 8.468,8.239 8.885,8.239 L16.970,8.237 L17.475,6.538 L9.522,6.539 C9.073,6.539 8.709,6.176 8.709,5.728 C8.709,5.281 9.073,4.919 9.522,4.919 L18.511,4.920 C20.000,4.920 19.408,6.458 19.408,6.459 ZM7.353,13.771 C8.249,13.771 8.976,14.494 8.976,15.385 C8.976,16.277 8.249,17.000 7.353,17.000 C6.457,17.000 5.730,16.277 5.730,15.385 C5.730,14.494 6.457,13.771 7.353,13.771 ZM14.435,13.771 C15.330,13.771 16.057,14.494 16.057,15.385 C16.057,16.277 15.330,17.000 14.435,17.000 C13.538,17.000 12.812,16.277 12.812,15.385 C12.812,14.494 13.538,13.771 14.435,13.771 Z\"/></svg></span> Купить";
     footerItem.prepend(btnBuy);
@@ -217,7 +217,89 @@ export function changeArrow() {
     }
 }
 
-export function showOrderForm() {
+export function showOrderForm(item) {
+    let showOrderItem = document.querySelector('.showOrderItem');
+    let blockItem = document.createElement('div');
+    blockItem.className = 'blockItem';
+    showOrderItem.append(blockItem);
+
+    let divShowImg = document.createElement('div');
+    divShowImg.className = 'divShowImg';
+    let imgShowItem = document.createElement('img');
+    imgShowItem.className = 'imgShowItem';
+    imgShowItem.src = item.imageUrls[0].split(',')[0];
+    divShowImg.append(imgShowItem);
+    blockItem.append(divShowImg);
+
+    let divItemDescription = document.createElement('div');
+    blockItem.append(divItemDescription);
+    divItemDescription.className = 'divItemDescription';
+
+    let ItemName = document.createElement('p');
+    ItemName.className = 'ItemName';
+    ItemName.innerHTML = item.name;
+    divItemDescription.append(ItemName);
+
+    let itemStar = document.createElement('p');
+    itemStar.className = 'itemStar';
+    for(let i=0; i<=3; i++){
+        itemStar.innerHTML += '<i class="fas fa-star"></i>';
+    }
+    itemStar.innerHTML += '<i class="far fa-star"></i>';
+    divItemDescription.append(itemStar);
+
+    let itemPrice = document.createElement('p');
+    itemPrice.className = 'itemPrice';
+    itemPrice.innerHTML =`₴${item.currentPrice} грн`;
+    divItemDescription.append(itemPrice);
+
+    let itemParamets = document.createElement('p');
+    itemParamets.className = 'itemParamets';
+    itemParamets.innerHTML = item.parametrs[0];
+    divItemDescription.append(itemParamets);
+
+    let itemDescription = document.createElement('p');
+    itemDescription.className = 'itemDescription';
+    itemDescription.innerHTML = item.description[0];
+    divItemDescription.append(itemDescription);
+
+    let itemQuantity = document.createElement('div');
+    itemQuantity.className = 'itemQuantity';
+    itemQuantity.innerHTML = '<b>Quantity:</b> ';
+    let inputTextItem = document.createElement('input');
+    inputTextItem.className = 'inputTextItem';
+    inputTextItem.type = 'number';
+    let placeholder = 5;
+    inputTextItem.placeholder = placeholder;
+    inputTextItem.setAttribute("disabled", "disabled");
+
+    let buttonPlusItem = document.createElement('button');
+    buttonPlusItem.className = 'buttonPlusItem plus-item';
+    buttonPlusItem.innerHTML = '+';
+
+    let buttonMinusItem = document.createElement('button');
+    buttonMinusItem.className = 'buttonMinusItem minus-item';
+    buttonMinusItem.innerHTML = '-';
+
+    itemQuantity.append(inputTextItem);
+    itemQuantity.append(buttonPlusItem);
+    itemQuantity.append(buttonMinusItem);
+    divItemDescription.append(itemQuantity);
+
+    buttonPlusItem.addEventListener('click', function(e){
+        e.preventDefault();
+        placeholder++;
+        inputTextItem.placeholder = placeholder
+    });
+    buttonMinusItem.addEventListener('click', function(e){
+        e.preventDefault();
+        if(placeholder == 0){
+            return;
+        }
+        placeholder--;
+        inputTextItem.placeholder = placeholder
+    });
+
     modal.style.display = "block";
 }
 

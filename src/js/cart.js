@@ -10,7 +10,7 @@
 // saveCart : Function
 // loadCart : Function
 
-let shoppingCart = (function () {
+let shoppingCart = (() => {
 
     let cart = [];
 
@@ -205,5 +205,4 @@ $('.show-cart').on("change", ".item-count", function (event) {
     shoppingCart.setCountForItem(name, count);
     displayCart();
 });
-
 displayCart();

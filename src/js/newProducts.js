@@ -55,8 +55,8 @@ axios
         data.map((item => {
             let card = createNewCard(item);
             categoryNews.append(card);
+            createProductDetailsModal(item);
         }));
-        createProductDetailsModal();
         return data;
     })
     .then((data) => {
@@ -319,7 +319,8 @@ function showProductDetails(item) {
     productDetailsModal.style.display = 'block';
 }
 
-function createProductDetailsModal() {
+function createProductDetailsModal(item) {
+    console.log("test" + item);
     let modal_content = document.querySelector('.modal_content_product');
 
     let divProduct = document.createElement('div');
@@ -345,14 +346,11 @@ function createProductDetailsModal() {
     divContent.append(costPrice);
 
     let btnOrder = document.createElement('button');
-    btnOrder.className = 'btnOrder';
-    btnOrder.addEventListener('click', () => {
-        document.querySelector('#product_modal_window').style.display = 'none';
-        showOrderForm();
-    });
+    btnOrder.className = 'btnOrder add-to-cart';
+    btnOrder.dataset.name = item.name;
+    btnOrder.dataset.price = item.currentPrice;
     btnOrder.innerHTML = 'Заказать';
     divContent.append(btnOrder);
-
     let paragBrend = document.createElement('p');
     paragBrend.className = 'paragBrand';
     divContent.append(paragBrend);

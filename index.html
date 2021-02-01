@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="dist/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
@@ -14,7 +18,6 @@
     <link rel='stylesheet' href='dist/css/main.css'>
     <link rel="stylesheet" href="dist/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="dist/owl-carousel/owl.theme.default.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>internet shop</title>
     <script src="dist/owl-carousel/owl.carousel.min.js"></script>
 </head>
@@ -52,8 +55,7 @@
         </div>
     </div>
     <div class="four"><a href="" class="exit">Войти </a><a href="">Личний кабинет</a>
-        <button type="button" data-toggle="modal" data-target="#cart"><img src="src/img/shop.png" alt="" class="shop"> корзина <br> 0/0</button>
-
+        <button  type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><img src="src/img/shop.png" alt="" class="shop"> корзина <br> 0/0</button>
 
         <p><img src="src/img/heart.png" alt=""> Избранное: <span>0</span><img src="src/img/search.png" alt="">
             Сравнение: <span>0</span></p>
@@ -77,26 +79,30 @@
     </section>
 </div>
 
-<div id="cart" class="modal">
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Корзина</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <table class="show-cart table">
-
-                    </table>
-                    <div>Общая сумма: $<span class="total-cart"></span></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                    <button type="button" id="addToCart" class="btn btn-primary">Добавить в корзину</button>
-                </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
+            <div class="modal-body">
+                <table class="show-cart table">
+
+                </table>
+                <div>Всего к оплате: <span class="total-cart"></span></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" id="addToCart" class="btn btn-primary">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="cart" class="modal">
 
 
     <form class="modal_content" method="post" action="send.php">

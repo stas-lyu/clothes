@@ -448,6 +448,9 @@ button:focus {
   transition: 0.3s;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.61); }
 
+.modal-backdrop.fade {
+  z-index: 2 !important; }
+
 html,
 body {
   box-sizing: border-box;

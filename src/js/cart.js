@@ -139,6 +139,7 @@ let shoppingCart = (function () {
 })();
 
 $('.add-to-cart').click(function (event) {
+    document.querySelector('#product_modal_window').style.display = 'none';
     event.preventDefault();
     let name = $(this).data('name');
     let price = Number($(this).data('price'));

@@ -2,7 +2,7 @@ import {
     createNewCard,
     initSlick,
     changeArrow,
-    item_modal_window,
+    showOrderForm,
 } from './newProducts';
 const headerSearchInput = $('.header_search_input');
 const headerSearchButton = $('.header_search_button');
@@ -30,7 +30,7 @@ headerSearchButton.click((event) => {
                 searchResult.slick('unslick');
                 searchResult.empty();
             }
-             data.forEach(element => {
+            data.forEach(element => {
                 let card = createNewCard(element);
                 searchResult.append(card);
             });
@@ -40,7 +40,7 @@ headerSearchButton.click((event) => {
             initSlick(searchResult);
             changeArrow();
             slickActive = true;
-            item_modal_window(data);
+            // showOrderForm(data);
         })
         .catch(err => {
             console.error(err);

@@ -365,3 +365,27 @@ function createProductDetailsModal() {
     description.className = 'descriptionProduct';
     divContent.append(description);
 }
+
+$('#sliderOne').owlCarousel({
+    loop:true,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+
+        768:{
+            items:4,
+            nav:false
+        },
+
+        1024:{
+            items:6,
+            nav:true,
+            loop:false
+
+        }
+    }
+})

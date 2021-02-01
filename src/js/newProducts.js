@@ -4,37 +4,42 @@ let span_close = document.getElementsByClassName("close_modal_window")[0];
 let orderBtnOrderForm = document.getElementById('order');
 let cancelBtnOrderForm = document.getElementById('cansel');
 let addToCart = document.querySelector('#addToCart');
-
 let productDetailsModal = document.querySelector('#product_modal_window');
 
 let spanCloseProductDetailsModal = document.querySelector('.close_modal_window_product');
 
 span_close.onclick = function () {
     modal.style.display = "none";
-}
+};
 
 orderBtnOrderForm.onclick = function (e) {
     e.preventDefault();
-}
+};
 
 cancelBtnOrderForm.onclick = function () {
+    let blockRemove = document.querySelector('.blockItem');
     modal.style.display = "none";
-}
+    blockRemove.remove();
+};
 
 window.onclick = function (event) {
+    let blockRemove = document.querySelector('.blockItem');
     if (event.target == modal) {
         modal.style.display = "none";
+        blockRemove.remove();
     }
     if (event.target == productDetailsModal) {
         productDetailsModal.style.display = "none";
+        blockRemove.remove();
     }
-}
+};
 
 
 spanCloseProductDetailsModal.onclick = function () {
     productDetailsModal.style.display = "none";
-}
-
+    let blockRemove = document.querySelector('.blockItem');
+    blockRemove.remove();
+};
 
 axios
     .get("/products")
@@ -63,19 +68,19 @@ axios
             let recommend = document.querySelector('#recommend .allNewProducts');
             let sale = document.querySelector('#sale .allNewProducts');
 
-                        function changeLink(link, value) {
-                            let windowWidth = document.documentElement.clientWidth;
+            function changeLink(link, value) {
+                let windowWidth = document.documentElement.clientWidth;
 
-                            if (windowWidth <= 1199) {
-                                link.innerHTML = `<svg
+                if (windowWidth <= 1199) {
+                    link.innerHTML = `<svg
              xmlns="http://www.w3.org/2000/svg"
              width="9px" height="24px">
             <image  x="0px" y="0px" width="9px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAYCAMAAAAfxSccAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgVBMVEVGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6tGc6v////dyEg5AAAAKXRSTlMAPK9BxMIGYWYK1uQabJcT4vk7gcAd7WSR4xgn9Z85NLa3F8EH5WfDQjL7mrQAAAABYktHRCpTvtSeAAAAB3RJTUUH5QEHETcgnGd4IwAAAHNJREFUCNdVj1kSglAQA1lEUXEBNwQV2e37X9AnAaw3X12ZykziuJ7vaBYES9EKQtF6wzYS7mAvOhyJE+EJzjJdrnCTmMI9Gyh/QCrxCfFroMKI75lKe/t3/K5U9mXzrW7sBHMqk7SNpvTd1KgfG7neR/AFKBcLgi3YMvMAAAAASUVORK5CYII=" />
             </svg>`
-                            } else {
-                                link.innerHTML = value
-                            }
-                        }
+                } else {
+                    link.innerHTML = value
+                }
+            }
 
             changeArrow();
             changeLink(products, `Все новинки`);
@@ -242,7 +247,7 @@ export function showOrderForm(item) {
 
     let itemStar = document.createElement('p');
     itemStar.className = 'itemStar';
-    for(let i=0; i<=3; i++){
+    for (let i = 0; i <= 3; i++) {
         itemStar.innerHTML += '<i class="fas fa-star"></i>';
     }
     itemStar.innerHTML += '<i class="far fa-star"></i>';
@@ -250,7 +255,7 @@ export function showOrderForm(item) {
 
     let itemPrice = document.createElement('p');
     itemPrice.className = 'itemPrice';
-    itemPrice.innerHTML =`₴${item.currentPrice} грн`;
+    itemPrice.innerHTML = `₴${item.currentPrice} грн`;
     divItemDescription.append(itemPrice);
 
     let itemParamets = document.createElement('p');
@@ -286,14 +291,14 @@ export function showOrderForm(item) {
     itemQuantity.append(buttonMinusItem);
     divItemDescription.append(itemQuantity);
 
-    buttonPlusItem.addEventListener('click', function(e){
+    buttonPlusItem.addEventListener('click', function (e) {
         e.preventDefault();
         placeholder++;
         inputTextItem.placeholder = placeholder
     });
-    buttonMinusItem.addEventListener('click', function(e){
+    buttonMinusItem.addEventListener('click', function (e) {
         e.preventDefault();
-        if(placeholder == 0){
+        if (placeholder == 0) {
             return;
         }
         placeholder--;
@@ -347,7 +352,7 @@ function createProductDetailsModal() {
     });
     btnOrder.innerHTML = 'Заказать';
     divContent.append(btnOrder);
-    
+
     let paragBrend = document.createElement('p');
     paragBrend.className = 'paragBrand';
     divContent.append(paragBrend);

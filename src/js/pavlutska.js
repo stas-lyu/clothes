@@ -21,7 +21,7 @@ headerSearchButton.click((event) => {
         return;
     }
 
-    fetch('/products?q=' + searchInputVal)
+    fetch('https://katecod88.github.io/data/db.json?q=' + searchInputVal)
         .then(response => {
             return response.json();
         })

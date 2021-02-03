@@ -44,7 +44,7 @@ spanCloseProductDetailsModal.onclick = function () {
 };
 
 axios
-    .get("https://katecod88.github.io/data/db.json/products")
+    .get("https://katecod88.github.io/data/db.json")
     .then(data => {
         return data.data
     })

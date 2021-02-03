@@ -5,7 +5,7 @@ let orderBtnOrderForm = document.getElementById('order');
 let cancelBtnOrderForm = document.getElementById('cansel');
 let addToCart = document.querySelector('#addToCart');
 let productDetailsModal = document.querySelector('#product_modal_window');
-
+const url = "https://katecod88.github.io/data/db.json";
 let spanCloseProductDetailsModal = document.querySelector('.close_modal_window_product');
 
 span_close.onclick = function () {
@@ -44,7 +44,7 @@ spanCloseProductDetailsModal.onclick = function () {
 };
 
 axios
-    .get("https://katecod88.github.io/data/db.json")
+    .get(url)
     .then(data => {
         return data.data
     })

@@ -9,6 +9,8 @@ let productDetailsModal = document.querySelector('#product_modal_window');
 let spanCloseProductDetailsModal = document.querySelector('.close_modal_window_product');
 
 span_close.onclick = function () {
+    let blockRemove = document.querySelector('.blockItem');
+    blockRemove.remove();
     modal.style.display = "none";
 };
 
@@ -18,27 +20,27 @@ orderBtnOrderForm.onclick = function (e) {
 
 cancelBtnOrderForm.onclick = function () {
     let blockRemove = document.querySelector('.blockItem');
-    modal.style.display = "none";
     blockRemove.remove();
+    modal.style.display = "none";
 };
 
 window.onclick = function (event) {
     let blockRemove = document.querySelector('.blockItem');
     if (event.target == modal) {
-        modal.style.display = "none";
         blockRemove.remove();
+        modal.style.display = "none";
     }
     if (event.target == productDetailsModal) {
+        if (blockRemove) {
+            blockRemove.remove();
+        }
         productDetailsModal.style.display = "none";
-        blockRemove.remove();
     }
 };
 
 
 spanCloseProductDetailsModal.onclick = function () {
     productDetailsModal.style.display = "none";
-    let blockRemove = document.querySelector('.blockItem');
-    blockRemove.remove();
 };
 
 axios
@@ -55,8 +57,9 @@ axios
         data.map((item => {
             let card = createNewCard(item);
             categoryNews.append(card);
-            createProductDetailsModal(item);
+
         }));
+        createProductDetailsModal();
         return data;
     })
     .then((data) => {
@@ -91,13 +94,13 @@ axios
 
         return data;
     })
-    .then(()=> {
+    .then(() => {
         // clearCart : Function
-// countCart : Function
-// totalCart : Function
-// listCart : Function
-// saveCart : Function
-// loadCart : Function
+        // countCart : Function
+        // totalCart : Function
+        // listCart : Function
+        // saveCart : Function
+        // loadCart : Function
 
         let shoppingCart = (function () {
 
@@ -245,16 +248,16 @@ axios
             let cartArray = shoppingCart.listCart();
             let output = "";
             for (let i in cartArray) {
-                output += "<tr>"
-                    + "<td>" + cartArray[i].name + "</td>"
-                    + "<td>(" + cartArray[i].price + ")</td>"
-                    + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-                    + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-                    + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-                    + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-                    + " = "
-                    + "<td>" + cartArray[i].total + "</td>"
-                    +  "</tr>";
+                output += "<tr>" +
+                    "<td>" + cartArray[i].name + "</td>" +
+                    "<td>(" + cartArray[i].price + ")</td>" +
+                    "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>" +
+                    "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>" +
+                    "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>" +
+                    "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>" +
+                    " = " +
+                    "<td>" + cartArray[i].total + "</td>" +
+                    "</tr>";
             }
             $('.show-cart').html(output);
             $('.total-cart').html(shoppingCart.totalCart());
@@ -263,14 +266,14 @@ axios
 
         let showCart = $('.show-cart');
 
-//Delete item button
+        //Delete item button
         showCart.on("click", ".delete-item", function (event) {
             let name = $(this).data('name');
             shoppingCart.removeItemFromCartAll(name);
             displayCart();
         });
 
-//-1
+        //-1
         showCart.on("click", ".minus-item",
             function (event) {
                 let name = $(this).data('name');
@@ -278,7 +281,7 @@ axios
                 displayCart();
             });
 
-//+1
+        //+1
         showCart.on("click", ".plus-item",
             function (event) {
                 let name = $(this).data('name');
@@ -286,7 +289,7 @@ axios
                 displayCart();
             });
 
-//Item count input
+        //Item count input
         $('.show-cart').on("change", ".item-count", function (event) {
             let name = $(this).data('name');
             let count = Number($(this).val());
@@ -296,12 +299,7 @@ axios
 
         displayCart();
     })
-    // .then((data) => {
-    //     // item_modal_window(data);
-    // })
-    // .then(() => {
-    //     // item_Prodocuts_Modal_Window(data);
-    // })
+
     .catch(err => {
         console.log(err)
         /*Do something with error, e.g. show error to user*/
@@ -348,7 +346,11 @@ export function createNewCard(item) {
     footerItem.className = 'footerItem';
     btnBuy.className = 'btn_by';
     btnBuy.addEventListener('click', () => {
+        createOrderFormItem(item);
+        /////
         showOrderForm(item);
+
+
     });
     btnBuy.innerHTML = "<span class=\"bucketIcon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20px\" height=\"17px\"><path fill-rule=\"evenodd\" fill=\"rgb(255, 255, 255)\" d=\"M19.408,6.459 L17.412,12.358 C17.412,12.358 17.249,13.234 16.405,13.234 L6.334,13.234 C5.330,13.234 5.287,12.134 5.287,12.134 L4.025,2.705 L0.783,1.883 C0.295,1.759 0.000,1.264 0.124,0.779 C0.249,0.293 0.745,-0.000 1.233,0.124 L5.077,1.100 C5.440,1.192 5.709,1.495 5.756,1.865 L6.333,6.537 L6.938,11.333 L16.049,11.333 L16.523,9.744 L8.885,9.741 C8.468,9.741 8.130,9.405 8.130,8.990 C8.130,8.575 8.468,8.239 8.885,8.239 L16.970,8.237 L17.475,6.538 L9.522,6.539 C9.073,6.539 8.709,6.176 8.709,5.728 C8.709,5.281 9.073,4.919 9.522,4.919 L18.511,4.920 C20.000,4.920 19.408,6.458 19.408,6.459 ZM7.353,13.771 C8.249,13.771 8.976,14.494 8.976,15.385 C8.976,16.277 8.249,17.000 7.353,17.000 C6.457,17.000 5.730,16.277 5.730,15.385 C5.730,14.494 6.457,13.771 7.353,13.771 ZM14.435,13.771 C15.330,13.771 16.057,14.494 16.057,15.385 C16.057,16.277 15.330,17.000 14.435,17.000 C13.538,17.000 12.812,16.277 12.812,15.385 C12.812,14.494 13.538,13.771 14.435,13.771 Z\"/></svg></span> Купить";
     footerItem.prepend(btnBuy);
@@ -375,12 +377,12 @@ export function initSlick(id) {
         prevArrow: `<div class="slick-custom-arrow slick-custom-arrow-right">
         </div>`,
         responsive: [{
-            breakpoint: 979,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        },
+                breakpoint: 979,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
             {
                 breakpoint: 749,
                 settings: {
@@ -427,7 +429,12 @@ export function changeArrow() {
     }
 }
 
-export function showOrderForm(item) {
+
+export function showOrderForm() {
+    modal.style.display = "block";
+}
+
+function createOrderFormItem(item) {
     let showOrderItem = document.querySelector('.showOrderItem');
     let blockItem = document.createElement('div');
     blockItem.className = 'blockItem';
@@ -509,8 +516,6 @@ export function showOrderForm(item) {
         placeholder--;
         inputTextItem.placeholder = placeholder
     });
-
-    modal.style.display = "block";
 }
 
 function showProductDetails(item) {
@@ -520,11 +525,13 @@ function showProductDetails(item) {
     document.querySelector('.productColor').innerHTML = `<b>Color:</b> ${item.color}`;
     document.querySelector('.descriptionProduct').innerHTML = `<b>Description:</b> ${item.description}`;
     document.querySelector('.costPrice').innerHTML = `CurrentPrice: <span class="spanText">${item.currentPrice * 1.2}</span> <b>${item.currentPrice}</b>`
+    document.querySelector('.add-to-cart').dataset.name = item.name;
+    document.querySelector('.add-to-cart').dataset.price = item.currentPrice;
 
     productDetailsModal.style.display = 'block';
 }
 
-function createProductDetailsModal(item) {
+function createProductDetailsModal() {
     let modal_content = document.querySelector('.modal_content_product');
     let divProduct = document.createElement('div');
     divProduct.innerHTML = '';
@@ -550,8 +557,7 @@ function createProductDetailsModal(item) {
 
     let btnOrder = document.createElement('button');
     btnOrder.className = 'btnOrder add-to-cart';
-    btnOrder.dataset.name = item.name;
-    btnOrder.dataset.price = item.currentPrice;
+
     btnOrder.innerHTML = 'Заказать';
     divContent.append(btnOrder);
     let paragBrend = document.createElement('p');
@@ -568,24 +574,24 @@ function createProductDetailsModal(item) {
 }
 
 $('#sliderOne').owlCarousel({
-    loop:true,
-    margin:10,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-            nav:true
+    loop: true,
+    margin: 10,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: true
         },
 
-        768:{
-            items:4,
-            nav:false
+        768: {
+            items: 4,
+            nav: false
         },
 
-        1024:{
-            items:6,
-            nav:true,
-            loop:false
+        1024: {
+            items: 6,
+            nav: true,
+            loop: false
 
         }
     }

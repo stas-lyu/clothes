@@ -44,7 +44,7 @@ spanCloseProductDetailsModal.onclick = function () {
 };
 
 axios
-    .get("https://my-json-server.typicode.com/stas-lyu/clothes/products")
+    .get("/products")
     .then(data => {
         return data.data
     })
@@ -94,90 +94,6 @@ axios
 
         return data;
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-    .then((data) => {
-        console.log(data);
-        let modal = document.getElementById("my_modal");
-        let modalContent = document.querySelector("#my_modal .modal_content");
-        let btn = document.querySelectorAll('.btn_by');
-        let span = document.getElementsByClassName("close_modal_window")[0];
-        let close = document.querySelector('#cansel');
-
-        for (let key of btn) {
-            key.onclick = function (e) {
-                let div = document.createElement('div');
-                div.className = 'card';
-                modal.style.display = "block";
-                console.log(e.target.id);
-                let newData = data.filter((item) => {
-                    return item.id == e.target.id
-                });
-
-                newData.map((item) => {
-                    let title = document.createElement(('h4'));
-                    title.innerHTML = "";
-                    title.innerHTML = item.name;
-                    div.append(title);
-                    modalContent.prepend(div);
-                })
-            }
-        }
-
-        let deleteCard = function () {
-            let card = document.querySelector(".card");
-            card.remove()
-        };
-
-        span.onclick = function () {
-            modal.style.display = "none";
-            deleteCard()
-        };
-
-        close.onclick = function () {
-            deleteCard();
-            modal.style.display = "none";
-        };
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                let name = $('input[name=fio]').val();
-                let tel = $('input[name=tel]').val();
-                let send = true;
-                if (name == "") {
-                    send = false;
-                } else if (tel == "") {
-                    send = false
-                }
-                if (send) {
-                    let userInfo = {
-                        'user_name': name,
-                        'user_tel': tel,
-                    };
-                    $.post('send.php', userInfo, function (response) {
-                        let result = '<div style="color:#D80018;">' + response.text + '</div>';
-                        $("#form_result").hide().html(result).slideDown();
-                    }, 'json');
-                }
-                deleteCard();
-            }
-        };
-        return data;
-    })
-
-    .then((data) => {
-        item_modal_window(data);
-
-    })
-=======
-    // .then((data) => {
-    //     // item_modal_window(data);
-    // })
-    // .then(() => {
-    //     // item_Prodocuts_Modal_Window(data);
-    // })
->>>>>>> 0ecc307a1323f6137f6d8cc3c1d8c344f18f859b
-=======
     .then(() => {
         // clearCart : Function
         // countCart : Function
@@ -384,7 +300,6 @@ axios
         displayCart();
     })
 
->>>>>>> production
     .catch(err => {
         console.log(err)
         /*Do something with error, e.g. show error to user*/
@@ -462,12 +377,12 @@ export function initSlick(id) {
         prevArrow: `<div class="slick-custom-arrow slick-custom-arrow-right">
         </div>`,
         responsive: [{
-                breakpoint: 979,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
+            breakpoint: 979,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+            }
+        },
             {
                 breakpoint: 749,
                 settings: {
@@ -616,10 +531,6 @@ function showProductDetails(item) {
     productDetailsModal.style.display = 'block';
 }
 
-<<<<<<< HEAD
-        }
-    }
-=======
 function createProductDetailsModal() {
     let modal_content = document.querySelector('.modal_content_product');
     let divProduct = document.createElement('div');
@@ -660,10 +571,6 @@ function createProductDetailsModal() {
     let description = document.createElement('p');
     description.className = 'descriptionProduct';
     divContent.append(description);
-<<<<<<< HEAD
->>>>>>> 0ecc307a1323f6137f6d8cc3c1d8c344f18f859b
-}
-=======
 }
 
 $('#sliderOne').owlCarousel({
@@ -688,5 +595,4 @@ $('#sliderOne').owlCarousel({
 
         }
     }
-})
->>>>>>> production
+});

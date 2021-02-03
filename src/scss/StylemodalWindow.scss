@@ -15,7 +15,7 @@
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%;
+  width: 80%;
   z-index: 99999;
 }
 .modal .modal_content .close_modal_window {
@@ -36,11 +36,15 @@
   margin: 20px 0 5px 0;
 }
 
-input {
-  width: 95%;
-  height: 25px;
+.customer_name input {
+  width: 100%;
+  height: 40px;
   border: 1px solid rgb(119, 119, 119);
   border-radius: 5px;
+}
+
+.customer_name {
+  margin: 0 auto;
 }
 
 input::-webkit-outer-spin-button,
@@ -49,10 +53,10 @@ input::-webkit-inner-spin-button {
 }
 
 .btn_cansel_order {
-  width: 95%;
-
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .btn_cansel_order button {
@@ -61,8 +65,8 @@ input::-webkit-inner-spin-button {
 
 #cansel,
 #order {
-  width: 100px;
-  height: 40px;
+  width: 150px;
+  height: 55px;
   border: none;
   font-size: 12px;
   cursor: pointer;
@@ -82,4 +86,94 @@ button,
 button:active,
 button:focus {
   outline: none;
+}
+
+.blockItem {
+  display: flex;
+  margin: 20px 0 0 30px;
+}
+
+.blockItem p {
+  margin-bottom: 20px;
+}
+
+.imgShowItem {
+  width: 340px;
+  height: 450px;
+  object-fit: cover;
+  padding: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.divItemDescription {
+  padding: 35px;
+  margin-left: 70px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.ItemName {
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+.itemStar {
+  color: #ffc315;
+  font-size: 14px;
+  cursor: pointer;
+}
+.fa-star {
+  margin-right: 2px;
+}
+
+.itemPrice {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e40046;
+}
+
+.itemParamets {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.itemQuantity {
+  display: flex;
+  align-items: center;
+}
+
+.inputTextItem {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  border-radius: 4px;
+}
+
+.buttonPlusItem,
+.buttonMinusItem {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 4px;
+  box-shadow: 4px 3px 7px -5px rgba(0, 0, 0, 0.61);
+}
+
+.buttonMinusItem:hover {
+  transition: 0.3s;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.61);
+}
+.buttonPlusItem:hover {
+  transition: 0.3s;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.61);
+}
+
+.modal-backdrop.fade {
+  z-index: 2!important;
 }
